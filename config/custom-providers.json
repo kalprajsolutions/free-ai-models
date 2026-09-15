@@ -1,5 +1,5 @@
 {
-  "_comment": "Add your own free-model providers here. Use this for gateways that require an API key just to list their catalog (so fetch-models.js can't auto-discover them) — e.g. AIHubMix, TokenRouter. Gateways with a public, no-auth /models endpoint (OpenRouter, Kilo Gateway) are fetched automatically instead; see SOURCES in fetch-models.js. Entries here always override an auto-fetched entry with the same 'id'.",
+  "_comment": "Manually-maintained free-model providers for scripts/fetch-models.js. Use this for gateways/models that have no public catalog API to auto-discover (e.g. Pollinations). Gateways WITH a public /models endpoint live in config/sources.json instead and are fetched automatically — AIHubMix and TokenRouter are already there; if a gateway needs an API key to list models, set its 'api_key_env' env var and it will be fetched too. Entries here always override an auto-fetched entry with the same 'id'.",
   "_schema": {
     "id":             "unique-slug/model-name",
     "name":           "Display name shown in the README table",
@@ -50,26 +50,6 @@
       "rate_limit":     "unlimited (no auth)",
       "notes":          "No API key required",
       "source":         "https://pollinations.ai"
-    },
-    {
-      "id":             "aihubmix/coding-glm-4.7-free",
-      "name":           "GLM-4.7 (free)",
-      "provider":       "AIHubMix",
-      "context_window": 205000,
-      "modalities":     ["text"],
-      "rate_limit":     "varies · can 429 during peak periods",
-      "notes":          "Requires a free AIHubMix API key; OpenAI-compatible endpoint, ~38 free models on their catalog",
-      "source":         "https://aihubmix.com/models"
-    },
-    {
-      "id":             "tokenrouter/z-ai/glm-5.3-free",
-      "name":           "GLM-5.3 (free)",
-      "provider":       "TokenRouter",
-      "context_window": 1048576,
-      "modalities":     ["text"],
-      "rate_limit":     "varies",
-      "notes":          "Requires TOKENROUTER_API_KEY; OpenAI-compatible endpoint at api.tokenrouter.com/v1",
-      "source":         "https://mastra.ai/models/providers/tokenrouter"
     }
   ]
 }

@@ -1,0 +1,56 @@
+{
+  "_comment": "Auto-fetch sources for scripts/fetch-models.js. Each entry is one gateway catalog that is fetched and filtered for free ($0) models on every run. Order matters: earlier sources win when the same model id appears on several gateways (later ones are recorded as extra availability instead of duplicating rows). To add a gateway, add an entry — no code changes needed unless its catalog uses a new response shape, in which case add a normalizer to NORMALIZERS in scripts/fetch-models.js. Gateways that need an API key just to LIST models (e.g. TokenRouter) set api_key_env; export that env var (locally, or as a GitHub Actions secret) and their catalog is fetched automatically. Set \"enabled\": false to pause a source without deleting it.",
+
+  "_schema": {
+    "name":        "Display name (used in logs, data/models.json 'sources', and as availability label)",
+    "enabled":     "Optional. Set false to skip this source without removing it",
+    "url":         "GET endpoint that returns the full model catalog as JSON",
+    "format":      "Response normalizer: 'openrouter' (OpenRouter-style pricing.prompt/completion; also matches the Kilo Gateway API), 'aihubmix' (numeric pricing.input/output, comma-string modalities), or 'openai' (plain /models list, free matched by name suffix)",
+    "id_prefix":   "Optional string prefixed to each model id to namespace it (e.g. 'aihubmix/')",
+    "provider":    "Optional. Fixed provider label for all models from this source; if omitted, the vendor is derived from the model id",
+    "source_url":  "Link written to the README 'Source' column. Use {id} to embed the model id, e.g. 'https://openrouter.ai/{id}'",
+    "rate_limit":  "Optional. Fixed rate-limit string for all models from this source (overrides the built-in per-vendor map)",
+    "free_filter": "Optional. 'zero-pricing' | 'name-suffix' | 'zero-pricing-or-suffix' (default: 'zero-pricing-or-suffix' for openrouter/aihubmix catalogs, 'name-suffix' is available for plain OpenAI lists)",
+    "api_key_env": "Optional name of an env var holding a Bearer token sent with the request",
+    "key_required": "Optional. If true and api_key_env is unset, skip the source with a notice instead of fetching without auth"
+  },
+
+  "sources": [
+    {
+      "name":       "OpenRouter",
+      "enabled":    true,
+      "url":        "https://openrouter.ai/api/v1/models",
+      "format":     "openrouter",
+      "source_url": "https://openrouter.ai/{id}"
+    },
+    {
+      "name":       "Kilo Gateway",
+      "enabled":    true,
+      "url":        "https://api.kilo.ai/api/gateway/models",
+      "format":     "openrouter",
+      "rate_limit": "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
+      "source_url": "https://kilo.ai/docs/gateway/models-and-providers"
+    },
+    {
+      "name":       "AIHubMix",
+      "enabled":    true,
+      "url":        "https://aihubmix.com/api/v1/models",
+      "format":     "aihubmix",
+      "id_prefix":  "aihubmix/",
+      "source_url": "https://aihubmix.com/models"
+    },
+    {
+      "name":        "TokenRouter",
+      "enabled":     true,
+      "url":         "https://api.tokenrouter.com/v1/models",
+      "format":      "openai",
+      "id_prefix":   "tokenrouter/",
+      "free_filter": "name-suffix",
+      "provider":    "TokenRouter",
+      "rate_limit":  "varies",
+      "api_key_env": "TOKENROUTER_API_KEY",
+      "key_required": true,
+      "source_url":  "https://mastra.ai/models/providers/tokenrouter"
+    }
+  ]
+}

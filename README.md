@@ -7,7 +7,7 @@
 
 **A daily-updated, community-maintained list of every free AI model (free LLM API) available right now.**
 
-No paywalls. No API key required to browse. Updated automatically every 24 hours by GitHub Actions pulling from [OpenRouter](https://openrouter.ai), [Pollinations AI](https://pollinations.ai), and other public sources.
+No paywalls. No API key required to browse. Updated automatically every 24 hours by GitHub Actions pulling from [OpenRouter](https://openrouter.ai), [Kilo Gateway](https://kilo.ai), [AIHubMix](https://aihubmix.com), [Pollinations AI](https://pollinations.ai), and other public sources.
 
 ### [↓ See the full list of free models](#free-models-auto-updated-daily)
 
@@ -57,40 +57,95 @@ Each model entry includes:
 ## Free models (auto-updated daily)
 
 <!-- TABLE_START -->
-> Last updated: **Tue, 15 Sep 2026 05:13:09 UTC** · 30 models tracked
+> Last updated: **Tue, 15 Sep 2026 05:58:51 UTC** · 85 models tracked
 
 | # | Model | Provider | Context | Modalities | Rate Limit | Source |
 |---|-------|----------|---------|------------|------------|--------|
-| 1 | **Thinking Machines: Inkling Small (free)** | Thinkingmachines | 1M | 💬 text, 🖼️ vision, audio | varies | [link](https://openrouter.ai/thinkingmachines/inkling-small:free) |
-| 2 | **Thinking Machines: Inkling (free)** | Thinkingmachines | 1M | 💬 text, 🖼️ vision, audio | varies | [link](https://openrouter.ai/thinkingmachines/inkling:free) |
-| 3 | **Google: Lyria 3 Pro Preview** | Google | 1M | 💬 text, 🖼️ vision, audio | varies | [link](https://openrouter.ai/google/lyria-3-pro-preview) |
-| 4 | **Google: Lyria 3 Clip Preview** | Google | 1M | 💬 text, 🖼️ vision, audio | varies | [link](https://openrouter.ai/google/lyria-3-clip-preview) |
-| 5 | **Gemini 2.0 Flash** | Pollinations AI | 1M | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
-| 6 | **GLM-5.3 (free)** | TokenRouter | 1M | 💬 text | varies | [link](https://mastra.ai/models/providers/tokenrouter) |
-| 7 | **NVIDIA: Nemotron 3.5 Lightning (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-lightning:free) |
-| 8 | **NVIDIA: Nemotron 3 Ultra (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free) |
-| 9 | **Dots Studio: Dots3-Note Preview (free)** | Dots studio | 512K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/dots-studio/dots-3-note-preview:free) |
-| 10 | **inclusionAI: Ling 3.0 Flash VL (free)** | Inclusionai | 262K | 💬 text, 🖼️ vision, video | varies | [link](https://openrouter.ai/inclusionai/ling-3.0-flash-vl:free) |
-| 11 | **Nex AGI: Nex-N2.5-Mini (free)** | Nex agi | 262K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/nex-agi/nex-n2.5-mini:free) |
-| 12 | **Nex AGI: Nex-N2.5-Pro (free)** | Nex agi | 262K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/nex-agi/nex-n2.5-pro:free) |
-| 13 | **inclusionAI: Ling 3.0 Flash Sante (free)** | Inclusionai | 262K | 💬 text | varies | [link](https://openrouter.ai/inclusionai/ling-3.0-flash-sante:free) |
-| 14 | **inclusionAI: Ling 3.0 Flash Fin (free)** | Inclusionai | 262K | 💬 text | varies | [link](https://openrouter.ai/inclusionai/ling-3.0-flash-fin:free) |
-| 15 | **Poolside: Laguna S 2.1 (free)** | Poolside | 262K | 💬 text | varies | [link](https://openrouter.ai/poolside/laguna-s-2.1:free) |
-| 16 | **Poolside: Laguna XS 2.1 (free)** | Poolside | 262K | 💬 text | varies | [link](https://openrouter.ai/poolside/laguna-xs-2.1:free) |
-| 17 | **Google: Gemma 4 26B A4B  (free)** | Google | 262K | 🖼️ vision, 💬 text, video | varies | [link](https://openrouter.ai/google/gemma-4-26b-a4b-it:free) |
-| 18 | **Google: Gemma 4 31B (free)** | Google | 262K | 🖼️ vision, 💬 text, video | varies | [link](https://openrouter.ai/google/gemma-4-31b-it:free) |
-| 19 | **NVIDIA: Nemotron 3 Super (free)** | Nvidia | 262K | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free) |
-| 20 | **Cohere: North Mini Code (free)** | Cohere | 256K | 💬 text | varies | [link](https://openrouter.ai/cohere/north-mini-code:free) |
-| 21 | **NVIDIA: Nemotron 3 Nano Omni (free)** | Nvidia | 256K | 💬 text, audio, 🖼️ vision, video | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free) |
-| 22 | **GLM-4.7 (free)** | AIHubMix | 205K | 💬 text | varies · can 429 during peak periods | [link](https://aihubmix.com/models) |
-| 23 | **Free Models Router** | Openrouter | 200K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/openrouter/free) |
-| 24 | **NVIDIA: Nemotron 3.5 Content Safety (free)** | Nvidia | 128K | 💬 text, 🖼️ vision | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-content-safety:free) |
-| 25 | **Mistral Nemo** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
-| 26 | **Mistral Small 3.2** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
-| 27 | **GPT-4o** | Pollinations AI | 128K | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
-| 28 | **LiquidAI: LFM2.5-2.6B (free)** | Liquid | 66K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-2.5-2.6b:free) |
-| 29 | **Auto Free** | Kilo Gateway | — | 💬 text | 200 req/hour (anonymous, no auth) · higher for signed-in accounts | [link](https://kilo.ai/docs/gateway/models-and-providers) |
-| 30 | **OpenRouter Free Models Router** | Kilo Gateway | — | 💬 text | 200 req/hour (anonymous, no auth) · higher for signed-in accounts | [link](https://kilo.ai/docs/gateway/models-and-providers) |
+| 1 | **GPT 5.5 (free)** | Openai | 1M | 💬 text, 🖼️ vision, 📄 files | varies | [link](https://aihubmix.com/models) |
+| 2 | **Thinking Machines: Inkling Small (free)** | Thinkingmachines | 1M | 💬 text, 🖼️ vision, audio | varies | [link](https://openrouter.ai/thinkingmachines/inkling-small:free) |
+| 3 | **Thinking Machines: Inkling (free)** | Thinkingmachines | 1M | 💬 text, 🖼️ vision, audio | varies | [link](https://openrouter.ai/thinkingmachines/inkling:free) |
+| 4 | **Google: Lyria 3 Pro Preview** | Google | 1M | 💬 text, 🖼️ vision, audio | varies | [link](https://openrouter.ai/google/lyria-3-pro-preview) |
+| 5 | **Google: Lyria 3 Clip Preview** | Google | 1M | 💬 text, 🖼️ vision, audio | varies | [link](https://openrouter.ai/google/lyria-3-clip-preview) |
+| 6 | **Gemini 3.8 Flash (free)** | Google | 1M | 💬 text, 🖼️ vision, video, audio, 📄 files | varies | [link](https://aihubmix.com/models) |
+| 7 | **Coding GLM 5.3 (free)** | Zhipu | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 8 | **Ox Alpha** | Zhipu | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 9 | **Gemini 3.7 Flash (free)** | Google | 1M | 💬 text, 🖼️ vision, video, audio, 📄 files | varies | [link](https://aihubmix.com/models) |
+| 10 | **Nemotron 3.5 Lightning (free)** | Nvidia | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 11 | **Gemini 3.5 Flash Lite (free)** | Google | 1M | 💬 text, 🖼️ vision, video, audio, 📄 files | varies | [link](https://aihubmix.com/models) |
+| 12 | **Gemini 3.6 Flash (free)** | Google | 1M | 💬 text, 🖼️ vision, video, audio, 📄 files | varies | [link](https://aihubmix.com/models) |
+| 13 | **Coding Kimi K3 (free)** | Moonshot | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 14 | **Nemotron 3 Super 120B A12B (free)** | Nvidia | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 15 | **Nemotron 3 Ultra 550B A55B (free)** | Nvidia | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 16 | **Laguna S 2.1 (free)** | Poolside | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 17 | **Nemotron 3 Nano 30B A3B (free)** | Nvidia | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 18 | **Xiaomi Mimo V2.5 (free)** | Xiaomi | 1M | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
+| 19 | **Xiaomi Mimo V2.5 Pro (free)** | Xiaomi | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 20 | **Gemini 3 Flash Preview (free)** | Google | 1M | 💬 text, 🖼️ vision, video, audio, 📄 files | varies | [link](https://aihubmix.com/models) |
+| 21 | **Gemini 2.0 Flash** | Pollinations AI | 1M | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
+| 22 | **GPT 4.1 (free)** | Openai | 1M | 💬 text, 🖼️ vision, 📄 files | varies | [link](https://aihubmix.com/models) |
+| 23 | **GPT 4.1 Mini (free)** | Openai | 1M | 💬 text, 🖼️ vision, 📄 files | varies | [link](https://aihubmix.com/models) |
+| 24 | **GPT 4.1 Nano (free)** | Openai | 1M | 💬 text, 🖼️ vision, 📄 files | varies | [link](https://aihubmix.com/models) |
+| 25 | **NVIDIA: Nemotron 3.5 Lightning (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-lightning:free) |
+| 26 | **NVIDIA: Nemotron 3 Ultra (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free) |
+| 27 | **Coding GLM 5.3 Flash (free)** | Zhipu | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 28 | **Coding GLM 5.2 (free)** | Zhipu | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 29 | **Coding MiniMax M3 (free)** | Minimax | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 30 | **Xiaomi Mimo V2 Pro (free)** | Xiaomi | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 31 | **Qwen3.6 Plus Preview (free)** | Alibaba | 1M | 💬 text | 20 req/min | [link](https://aihubmix.com/models) |
+| 32 | **Dots 3 Note Preview (free)** | Dots studio | 524K | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
+| 33 | **Dots Studio: Dots3-Note Preview (free)** | Dots studio | 512K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/dots-studio/dots-3-note-preview:free) |
+| 34 | **inclusionAI: Ling 3.0 Flash VL (free)** | Inclusionai | 262K | 💬 text, 🖼️ vision, video | varies | [link](https://openrouter.ai/inclusionai/ling-3.0-flash-vl:free) |
+| 35 | **Nex AGI: Nex-N2.5-Mini (free)** | Nex agi | 262K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/nex-agi/nex-n2.5-mini:free) |
+| 36 | **Nex AGI: Nex-N2.5-Pro (free)** | Nex agi | 262K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/nex-agi/nex-n2.5-pro:free) |
+| 37 | **inclusionAI: Ling 3.0 Flash Sante (free)** | Inclusionai | 262K | 💬 text | varies | [link](https://openrouter.ai/inclusionai/ling-3.0-flash-sante:free) |
+| 38 | **inclusionAI: Ling 3.0 Flash Fin (free)** | Inclusionai | 262K | 💬 text | varies | [link](https://openrouter.ai/inclusionai/ling-3.0-flash-fin:free) |
+| 39 | **Poolside: Laguna S 2.1 (free)** | Poolside | 262K | 💬 text | varies | [link](https://openrouter.ai/poolside/laguna-s-2.1:free) |
+| 40 | **Poolside: Laguna XS 2.1 (free)** | Poolside | 262K | 💬 text | varies | [link](https://openrouter.ai/poolside/laguna-xs-2.1:free) |
+| 41 | **Google: Gemma 4 26B A4B  (free)** | Google | 262K | 🖼️ vision, 💬 text, video | varies | [link](https://openrouter.ai/google/gemma-4-26b-a4b-it:free) |
+| 42 | **Google: Gemma 4 31B (free)** | Google | 262K | 🖼️ vision, 💬 text, video | varies | [link](https://openrouter.ai/google/gemma-4-31b-it:free) |
+| 43 | **NVIDIA: Nemotron 3 Super (free)** | Nvidia | 262K | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free) |
+| 44 | **StepFun: Step 3.7 Flash (free)** | Stepfun | 262K | 💬 text, 🖼️ vision | 200 req/hour (anonymous, no auth) · higher for signed-in accounts | [link](https://kilo.ai/docs/gateway/models-and-providers) |
+| 45 | **Ling 3.0 Tiny (free)** | Inclusionai | 262K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 46 | **Ling 3.0 Flash (free)** | Inclusionai | 262K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 47 | **Nemotron 3 Nano Omni 30B A3B (reasoning) (free)** | Nvidia | 262K | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
+| 48 | **Laguna Xs 2.1 (free)** | Poolside | 262K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 49 | **Gemma 4 31B It (free)** | Google | 262K | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 50 | **Gemma 4 26B A4B It (free)** | Google | 262K | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 51 | **K2.6 Code Preview (free)** | Moonshot | 262K | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 52 | **Cohere: North Mini Code (free)** | Cohere | 256K | 💬 text | varies | [link](https://openrouter.ai/cohere/north-mini-code:free) |
+| 53 | **NVIDIA: Nemotron 3 Nano Omni (free)** | Nvidia | 256K | 💬 text, audio, 🖼️ vision, video | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free) |
+| 54 | **Auto Free** | Kilo auto | 256K | 💬 text | 200 req/hour (anonymous, no auth) · higher for signed-in accounts | [link](https://kilo.ai/docs/gateway/models-and-providers) |
+| 55 | **Hy3 (free)** | Tencent | 256K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 56 | **North Mini Code (free)** | Cohere | 256K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 57 | **Xiaomi Mimo V2 Omni (free)** | Xiaomi | 256K | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
+| 58 | **Kimi For Coding (free)** | Moonshot | 256K | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 59 | **MiMo V2 Flash (free)** | AIHubMix | 256K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 60 | **MiniMax M2.7 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 61 | **Coding MiniMax M2.7 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 62 | **Coding GLM 5 Turbo (free)** | Zhipu | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 63 | **Coding MiniMax M2.5 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 64 | **Coding MiniMax M2.1 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 65 | **Coding MiniMax M2 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 66 | **Free Models Router** | Openrouter | 200K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/openrouter/free) |
+| 67 | **Coding GLM 5.1 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 68 | **Coding GLM 5 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 69 | **GLM 4.7 Flash (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 70 | **Coding GLM 4.7 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 71 | **Coding GLM 4.6 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 72 | **Lfm 2.5 2.6b (free)** | Liquid | 131K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 73 | **GPT Oss 20B (free)** | Openai | 131K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 74 | **Nemotron Nano 9B V2 (free)** | Nvidia | 131K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 75 | **Nemotron Nano 12B V2 VL (free)** | Nvidia | 131K | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 76 | **Nemotron 3.5 Content Safety (free)** | Nvidia | 131K | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 77 | **NVIDIA: Nemotron 3.5 Content Safety (free)** | Nvidia | 128K | 💬 text, 🖼️ vision | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-content-safety:free) |
+| 78 | **GPT 4o (free)** | Openai | 128K | 💬 text, 🖼️ vision, 📄 files | varies | [link](https://aihubmix.com/models) |
+| 79 | **Mistral Nemo** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
+| 80 | **Mistral Small 3.2** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
+| 81 | **GPT-4o** | Pollinations AI | 128K | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
+| 82 | **LiquidAI: LFM2.5-2.6B (free)** | Liquid | 66K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-2.5-2.6b:free) |
+| 83 | **GPT Image 2 (free)** | Openai | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 84 | **Gemini 3.1 Flash Image Preview (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 85 | **GPT Live Transcribe** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
 <!-- TABLE_END -->
 
 ---
@@ -103,10 +158,15 @@ GitHub Actions (daily 04:00 UTC)
          ▼
   fetch-models.js
          │
-         ├── GET openrouter.ai/api/v1/models  (no auth required)
-         │   └── filter: pricing.prompt === "0"
+         ├── Reads config/sources.json (all gateways, run in parallel)
          │
-         ├── Static list: Pollinations AI, etc.
+         ├── GET openrouter.ai/api/v1/models        (no auth required)
+         ├── GET api.kilo.ai/api/gateway/models     (no auth required)
+         ├── GET aihubmix.com/api/v1/models         (no auth required)
+         ├── GET api.tokenrouter.com/v1/models      (optional TOKENROUTER_API_KEY)
+         │   └── filter: pricing at $0 (or ":free"/"-free" name suffix)
+         │
+         ├── Static list: Pollinations AI, etc. (config/custom-providers.json)
          │
          └── Writes:
              ├── data/models.json       ← current snapshot
@@ -115,6 +175,12 @@ GitHub Actions (daily 04:00 UTC)
 ```
 
 No scraping, no reverse engineering — only public official APIs.
+
+**Adding a gateway:** edit `config/sources.json` — add an entry with the
+gateway's models URL and response `format` (`openrouter`, `aihubmix`, or
+`openai`). No code changes needed unless the catalog uses a new response
+shape; then add a normalizer to `NORMALIZERS` in
+[`scripts/fetch-models.js`](scripts/fetch-models.js).
 
 ---
 
@@ -178,7 +244,12 @@ maintain the plumbing yourself.
 
 ## Contributing
 
-Found a free model we're missing? Open a PR editing `EXTRA_PROVIDERS` in [`scripts/fetch-models.js`](scripts/fetch-models.js).
+Found a free model we're missing? Open a PR:
+
+- **Single model from a gateway with no catalog API** — add it to the
+  `providers` array in [`config/custom-providers.json`](config/custom-providers.json).
+- **A whole gateway whose catalog we should auto-fetch** — add an entry to
+  [`config/sources.json`](config/sources.json) (see the `_schema` block there).
 
 **Guidelines:**
 - Model must be genuinely free (no hidden fees, no trial-only)

@@ -17,6 +17,10 @@ jobs:
         with:
           node-version: "24"
       - run: node scripts/fetch-models.js
+        env:
+          # Optional: gateways that require an API key to list their catalog
+          # (see api_key_env entries in config/sources.json)
+          TOKENROUTER_API_KEY: ${{ secrets.TOKENROUTER_API_KEY }}
       - id: diff
         run: git diff --quiet data/models.json README.md || echo "changed=true" >> $GITHUB_OUTPUT
       - if: steps.diff.outputs.changed == 'true'

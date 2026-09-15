@@ -2,33 +2,41 @@
 /**
  * fetch-models.js
  *
- * Fetches all currently available FREE AI models from every configured
- * SOURCE (OpenRouter, Kilo Gateway, and any others you wire up — see
- * "Auto-fetch sources" below), merges in manually-configured custom
- * providers, and writes:
- *   - data/models.json          — current snapshot
+ * Fetches all currently available FREE AI models from every source listed in
+ * config/sources.json (OpenRouter, Kilo Gateway, AIHubMix, TokenRouter, and
+ * any others you add), merges in manually-configured custom providers, and
+ * writes:
+ *   - data/models.json             — current snapshot
  *   - data/history/YYYY-MM-DD.json — daily archive
- *   - README.md                 — regenerated table section
+ *   - README.md                    — regenerated table section
  *
  * Run: node scripts/fetch-models.js
  * Intended to run daily (e.g. via GitHub Actions cron) since gateways add
  * and remove free models frequently.
  *
- * Auto-fetch sources (no API key needed to list models):
- *   - OpenRouter   https://openrouter.ai/api/v1/models
- *   - Kilo Gateway https://api.kilo.ai/api/gateway/models
- *   Add more by pushing another entry into the SOURCES array below — each
- *   source is just an async function that returns an array of normalised
- *   model objects. A fetch failure in one source logs a warning and is
- *   skipped; it never aborts the whole run.
+ * Auto-fetch sources (config/sources.json):
+ *   Each entry describes one gateway catalog. "format" selects the response
+ *   normalizer:
+ *     - "openrouter" — OpenRouter-style catalog. Also matches the Kilo
+ *       Gateway API (https://api.kilo.ai/api/gateway/models), which returns
+ *       the same shape: data[].pricing.{prompt,completion} as strings,
+ *       data[].architecture.{input,output}_modalities, top_provider, etc.
+ *     - "aihubmix"   — AIHubMix catalog (https://aihubmix.com/api/v1/models):
+ *       data[].pricing.{input,output} as numbers, comma-separated modality
+ *       strings, retire_stage filtering.
+ *     - "openai"     — plain OpenAI-compatible /models listing (e.g.
+ *       TokenRouter). These usually carry no pricing info, so free models
+ *       are detected by name suffix (see "free_filter").
+ *   Gateways that need an API key just to LIST their catalog (TokenRouter)
+ *   declare "api_key_env". If that env var is set the key is sent as a Bearer
+ *   token; if it's required but missing, the source is skipped with a notice —
+ *   it never aborts the whole run.
  *
  * Manually-maintained providers (config/custom-providers.json):
- *   Some gateways (AIHubMix, TokenRouter, etc.) require an API key just to
- *   list their catalog, so they can't be safely auto-fetched here without
- *   you providing credentials. Add/edit/remove those by hand in
- *   config/custom-providers.json — see that file's "_schema" block. Entries
- *   there always take precedence over auto-fetched ones with the same id.
- *   Point at a different config file with --config=/path/to/file.json.
+ *   For gateways/models that can't be auto-fetched at all (e.g. Pollinations,
+ *   which has no catalog API). Entries there always take precedence over
+ *   auto-fetched ones with the same id. Point either file somewhere else with
+ *   --sources=PATH / --config=PATH.
  */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
@@ -47,6 +55,8 @@ function getArgValue(flag) {
   return hit ? hit.slice(prefix.length) : null;
 }
 
+const SOURCES_PATH =
+  getArgValue("sources") ?? join(ROOT, "config", "sources.json");
 const CONFIG_PATH =
   getArgValue("config") ?? join(ROOT, "config", "custom-providers.json");
 
@@ -58,11 +68,22 @@ Usage:
   node scripts/fetch-models.js [options]
 
 Options:
+  --sources=PATH  Path to the auto-fetch sources config
+                  (default: config/sources.json)
   --config=PATH   Path to a custom providers JSON file
                   (default: config/custom-providers.json)
   --help, -h      Show this help
 
-To add your own provider permanently, edit:
+To add an auto-fetched gateway permanently, edit ${SOURCES_PATH}:
+  {
+    "name":        "MyGateway",
+    "url":         "https://api.example.com/v1/models",
+    "format":      "openrouter",
+    "enabled":     true,
+    "api_key_env": "MYGATEWAY_API_KEY"
+  }
+
+To add an individual model from a gateway with no catalog API, edit
   ${CONFIG_PATH}
 and add an object to the "providers" array, e.g.:
   {
@@ -100,7 +121,55 @@ function getRateLimit(modelId) {
   return "varies";
 }
 
-// ── Modality icons ─────────────────────────────────────────────────────────────
+// ── Free-model detection helpers ───────────────────────────────────────────────
+// Free models are either priced at $0 for both prompt & completion tokens
+// (pricing may arrive as numbers or strings, and under different key names per
+// gateway), or tagged with a ":free"/"-free"/"/free" name suffix.
+
+const FREE_NAME_RE = /(?:^|[/:\-_])free$/i;
+
+function toNum(v) {
+  if (v === undefined || v === null || v === "") return null;
+  const n = typeof v === "number" ? v : parseFloat(String(v));
+  return Number.isNaN(n) ? null : n;
+}
+
+function isZeroPricing(pricing) {
+  if (!pricing || typeof pricing !== "object") return false;
+  // OpenRouter/Kilo use pricing.prompt / pricing.completion;
+  // AIHubMix uses pricing.input / pricing.output.
+  const prompt = toNum(pricing.prompt ?? pricing.input);
+  const completion = toNum(pricing.completion ?? pricing.output);
+  return prompt === 0 && completion === 0;
+}
+
+function looksFreeByName(id, name) {
+  return FREE_NAME_RE.test(id ?? "") || FREE_NAME_RE.test(name ?? "");
+}
+
+// free_filter strategies, selectable per source in config/sources.json
+const FREE_FILTERS = {
+  "zero-pricing": (m) => isZeroPricing(m.pricing ?? m.cost),
+  "name-suffix": (m) => looksFreeByName(m.id, m.name),
+  "zero-pricing-or-suffix": (m) =>
+    isZeroPricing(m.pricing ?? m.cost) ||
+    m.isFree === true ||
+    looksFreeByName(m.id, m.name),
+};
+
+// ── Modality helpers ───────────────────────────────────────────────────────────
+// Accepts an array or a comma-separated string (AIHubMix style); maps pdf→file
+// and de-duplicates.
+function normaliseModalities(input) {
+  let parts = [];
+  if (Array.isArray(input)) parts = input;
+  else if (typeof input === "string" && input.trim())
+    parts = input.split(",").map((s) => s.trim());
+
+  const map = { pdf: "file" };
+  return [...new Set(parts.map((p) => map[p] ?? p).filter(Boolean))];
+}
+
 function modalityBadge(modality) {
   const map = {
     text:  "💬 text",
@@ -118,125 +187,262 @@ function fmtCtx(n) {
   return String(n);
 }
 
-// ── Auto-fetch sources ───────────────────────────────────────────────────────
-// Each source is an async function that returns an array of ALREADY-normalised
-// model objects (same shape as normaliseCustomProvider() produces). Add a new
-// gateway by writing one of these and pushing it into SOURCES at the bottom.
+// ── Misc helpers ───────────────────────────────────────────────────────────────
+function titleCaseSlug(slug) {
+  return slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, " ");
+}
 
-async function fetchOpenRouterModels() {
-  const res = await fetch("https://openrouter.ai/api/v1/models", {
-    headers: { "User-Agent": "free-ai-models-tracker/1.0 (github.com/ClawLabsAI/free-ai-models)" },
-  });
-  if (!res.ok) throw new Error(`OpenRouter API ${res.status}: ${res.statusText}`);
-  const { data } = await res.json();
+function extractList(body) {
+  // Be defensive about response shape: bare array, {data: [...]}, {models: [...]}
+  if (Array.isArray(body)) return body;
+  if (Array.isArray(body?.data)) return body.data;
+  if (Array.isArray(body?.models)) return body.models;
+  return null;
+}
 
-  // Free models have pricing.prompt === "0" && pricing.completion === "0"
-  const freeModels = data.filter(
-    (m) =>
-      m.pricing &&
-      (m.pricing.prompt === "0" || parseFloat(m.pricing.prompt) === 0) &&
-      (m.pricing.completion === "0" || parseFloat(m.pricing.completion) === 0)
+function renderSourceUrl(template, id) {
+  return template?.includes("{id}") ? template.replace("{id}", id) : (template ?? "");
+}
+
+// ── Auto-fetch sources (config-driven) ─────────────────────────────────────────
+// Each response "format" maps to a normalizer that turns one raw catalog entry
+// into the canonical model shape. Add a new gateway layout by writing another
+// normalizer and referencing it with "format" in config/sources.json.
+
+// "openrouter" — OpenRouter-style catalog. Also matches the Kilo Gateway API,
+// which now returns the identical shape (data[].pricing.{prompt,completion},
+// architecture.{input,output}_modalities, top_provider, isFree flag, ...).
+function normalizeOpenRouterStyle(m, source) {
+  const providerSlug = m.id.split("/")[0] ?? "";
+  const provider =
+    source.provider || (providerSlug ? titleCaseSlug(providerSlug) : source.name);
+  const allModalities = normaliseModalities([
+    ...(m.architecture?.input_modalities ?? []),
+    ...(m.architecture?.output_modalities ?? []),
+  ]);
+
+  return {
+    id:             `${source.id_prefix ?? ""}${m.id}`,
+    name:           m.name ?? m.id,
+    provider,
+    context_window: m.context_length ?? m.top_provider?.context_length ?? 0,
+    max_output:     m.top_provider?.max_completion_tokens ?? null,
+    modalities:     allModalities.length ? allModalities : ["text"],
+    rate_limit:     source.rate_limit ?? getRateLimit(m.id),
+    notes:          "",
+    source:         renderSourceUrl(source.source_url, m.id),
+    created:        m.created ?? null,
+  };
+}
+
+// "aihubmix" — AIHubMix catalog. pricing.{input,output} are numbers,
+// modalities are comma-separated strings, retire_stage marks deprecated rows.
+function normalizeAIHubMix(m, source) {
+  if (m.retire_stage && m.retire_stage !== "active") return null;
+
+  const provider =
+    source.provider || (m.vendor ? titleCaseSlug(m.vendor) : source.name);
+  const allModalities = normaliseModalities(
+    [m.input_modalities, m.output_modalities]
+      .filter((s) => typeof s === "string")
+      .join(",")
   );
 
-  console.log(`✅ OpenRouter: ${freeModels.length} free models`);
-
-  return freeModels.map((m) => {
-    const providerSlug = m.id.split("/")[0];
-    const providerName =
-      providerSlug.charAt(0).toUpperCase() + providerSlug.slice(1).replace(/-/g, " ");
-    const inputModalities  = m.architecture?.input_modalities  ?? ["text"];
-    const outputModalities = m.architecture?.output_modalities ?? ["text"];
-    const allModalities    = [...new Set([...inputModalities, ...outputModalities])];
-
-    return {
-      id:             m.id,
-      name:           m.name,
-      provider:       providerName,
-      context_window: m.context_length ?? 0,
-      max_output:     m.top_provider?.max_completion_tokens ?? null,
-      modalities:     allModalities,
-      rate_limit:     getRateLimit(m.id),
-      notes:          "",
-      source:         `https://openrouter.ai/${m.id}`,
-      created:        m.created ?? null,
-    };
-  });
-}
-
-// Kilo Gateway publishes its full catalog with no API key required:
-// GET https://api.kilo.ai/api/gateway/models
-// Response shape (per model): { id, name, cost: {input, output}, limit:
-// {context, output}, modalities: {input: [...], output: [...]}, options:
-// {description}, release_date }. Free models have cost.input/output === 0,
-// or an id/name ending in "-free" / "/free" (e.g. kilo-auto/free).
-async function fetchKiloModels() {
-  const res = await fetch("https://api.kilo.ai/api/gateway/models", {
-    headers: { "User-Agent": "free-ai-models-tracker/1.0 (github.com/ClawLabsAI/free-ai-models)" },
-  });
-  if (!res.ok) throw new Error(`Kilo Gateway API ${res.status}: ${res.statusText}`);
-  const body = await res.json();
-
-  // Be defensive about response shape: could be a bare array, {data: [...]},
-  // or an object keyed by model id.
-  const list = Array.isArray(body)
-    ? body
-    : Array.isArray(body?.data)
-      ? body.data
-      : Object.values(body ?? {});
-
-  const isFree = (m) => {
-    const cost = m.cost ?? m.pricing ?? {};
-    const zeroCost =
-      (cost.input === 0 || cost.input === "0") &&
-      (cost.output === 0 || cost.output === "0");
-    const freeName = /(^|\/|-)free$/i.test(m.id ?? "") || /(^|\/|-)free$/i.test(m.name ?? "");
-    return zeroCost || freeName;
+  return {
+    id:             `${source.id_prefix ?? ""}${m.model_id ?? m.id}`,
+    name:           m.model_name ?? m.name ?? m.model_id,
+    provider,
+    context_window: m.context_length ?? 0,
+    max_output:     m.max_output ?? null,
+    modalities:     allModalities.length ? allModalities : ["text"],
+    rate_limit:     source.rate_limit ?? getRateLimit(m.model_id ?? ""),
+    notes:          "",
+    source:         renderSourceUrl(source.source_url, m.model_id ?? m.id),
+    created:        m.release_date ?? null,
   };
-
-  const free = list.filter(isFree);
-  console.log(`✅ Kilo Gateway: ${free.length} free models`);
-
-  return free.map((m) => {
-    const inputModalities  = m.modalities?.input  ?? ["text"];
-    const outputModalities = m.modalities?.output ?? ["text"];
-    const allModalities    = [...new Set([...inputModalities, ...outputModalities])];
-
-    return {
-      id:             `kilo/${m.id}`,
-      name:           m.name ?? m.id,
-      provider:       "Kilo Gateway",
-      context_window: m.limit?.context ?? 0,
-      max_output:     m.limit?.output ?? null,
-      modalities:     allModalities,
-      rate_limit:     "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
-      notes:          m.options?.description ?? "",
-      source:         "https://kilo.ai/docs/gateway/models-and-providers",
-      created:        m.release_date ?? null,
-    };
-  });
 }
 
-// Register every auto-fetch source here. Each entry: { name, fetch }.
-// A failure in one source is caught, logged, and skipped — it never aborts
-// the whole run (see runSources() in main()).
-const SOURCES = [
-  { name: "OpenRouter",   fetch: fetchOpenRouterModels },
-  { name: "Kilo Gateway", fetch: fetchKiloModels },
-  // Add more here, e.g.:
-  // { name: "SomeGateway", fetch: fetchSomeGatewayModels },
-];
+// "openai" — plain OpenAI-compatible /models listing (TokenRouter etc.).
+// Usually carries no pricing, so free models are matched by name suffix and
+// metadata falls back to whatever the source config provides.
+function normalizeOpenAI(m, source) {
+  const providerSlug = m.owned_by ?? m.id?.split("/")[0] ?? "";
+  const provider =
+    source.provider || (providerSlug ? titleCaseSlug(providerSlug) : source.name);
+  const modalities = normaliseModalities(m.input_modalities ?? m.modalities);
 
-async function runSources() {
-  const results = [];
-  for (const { name, fetch: fetchFn } of SOURCES) {
+  return {
+    id:             `${source.id_prefix ?? ""}${m.id}`,
+    name:           m.name ?? m.id,
+    provider,
+    context_window: m.context_length ?? m.max_context_window_tokens ?? 0,
+    max_output:     m.max_output_tokens ?? null,
+    modalities:     modalities.length ? modalities : ["text"],
+    rate_limit:     source.rate_limit ?? getRateLimit(m.id),
+    notes:          "",
+    source:         renderSourceUrl(source.source_url, m.id),
+    created:        m.created ?? null,
+  };
+}
+
+const NORMALIZERS = {
+  openrouter: normalizeOpenRouterStyle,
+  aihubmix:   normalizeAIHubMix,
+  openai:     normalizeOpenAI,
+};
+
+// Required fields for a source entry in config/sources.json
+const REQUIRED_SOURCE_FIELDS = ["name", "url", "format"];
+
+async function fetchWithRetry(url, headers, attempts = 2) {
+  let lastErr;
+  for (let i = 0; i < attempts; i++) {
     try {
-      const models = await fetchFn();
-      results.push(...models);
+      const res = await fetch(url, {
+        headers,
+        signal: AbortSignal.timeout(30_000),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+      return await res.json();
     } catch (err) {
-      console.warn(`⚠️  Skipping source "${name}" — ${err.message}`);
+      lastErr = err;
+      if (i < attempts - 1) {
+        console.warn(`   ↳ retrying ${url} after error: ${err.message}`);
+        await new Promise((r) => setTimeout(r, 1_500));
+      }
     }
   }
+  throw lastErr;
+}
+
+function validateSource(s, originLabel) {
+  const missing = REQUIRED_SOURCE_FIELDS.filter((f) => !s[f]);
+  if (missing.length) {
+    console.warn(
+      `⚠️  Skipping source from ${originLabel} — missing field(s): ${missing.join(", ")}`
+    );
+    return false;
+  }
+  if (!NORMALIZERS[s.format]) {
+    console.warn(
+      `⚠️  Skipping source "${s.name}" — unknown format "${s.format}" (expected one of: ${Object.keys(NORMALIZERS).join(", ")})`
+    );
+    return false;
+  }
+  return true;
+}
+
+async function fetchSource(source) {
+  const headers = {
+    "User-Agent": "free-ai-models-tracker/1.0 (github.com/ClawLabsAI/free-ai-models)",
+    Accept: "application/json",
+  };
+
+  // Optional API key (some gateways require one even to list models).
+  let apiKey = null;
+  if (source.api_key_env) {
+    apiKey = process.env[source.api_key_env] ?? null;
+    if (apiKey) headers.Authorization = `Bearer ${apiKey}`;
+    else if (source.key_required) {
+      console.log(`⏭️  ${source.name}: ${source.api_key_env} not set — skipping (set it to auto-fetch this gateway)`);
+      return null;
+    } else {
+      console.warn(`⚠️  ${source.name}: ${source.api_key_env} not set — fetching without auth`);
+    }
+  }
+
+  const body = await fetchWithRetry(source.url, headers);
+  const list = extractList(body);
+  if (!list) throw new Error("unexpected response shape (no model list found)");
+
+  const freeFilter =
+    FREE_FILTERS[source.free_filter] ?? FREE_FILTERS["zero-pricing-or-suffix"];
+
+  const models = list
+    .filter(freeFilter)
+    .map((m) => NORMALIZERS[source.format](m, source))
+    .filter(Boolean);
+
+  console.log(`✅ ${source.name}: ${models.length} free models`);
+  return models;
+}
+
+async function runSources(sources) {
+  // Run all sources in parallel; a failure in one is logged and skipped.
+  const settled = await Promise.allSettled(sources.map((s) => fetchSource(s)));
+
+  const results = [];
+  sources.forEach((source, i) => {
+    const outcome = settled[i];
+    if (outcome.status === "fulfilled" && outcome.value) {
+      results.push({ name: source.name, models: outcome.value });
+    } else if (outcome.status === "rejected") {
+      console.warn(
+        `⚠️  Skipping source "${source.name}" — ${outcome.reason?.message ?? outcome.reason}`
+      );
+    }
+  });
   return results;
+}
+
+// ── Load the sources config ────────────────────────────────────────────────────
+function loadSources(configPath) {
+  if (!existsSync(configPath)) {
+    console.warn(`⚠️  No sources config found at ${configPath} — nothing will be auto-fetched.`);
+    return [];
+  }
+
+  let raw;
+  try {
+    raw = JSON.parse(readFileSync(configPath, "utf8"));
+  } catch (err) {
+    console.warn(`⚠️  Could not parse ${configPath}: ${err.message}. No auto-fetch sources.`);
+    return [];
+  }
+
+  const list = Array.isArray(raw) ? raw : raw.sources;
+  if (!Array.isArray(list)) {
+    console.warn(
+      `⚠️  ${configPath} must be either a JSON array of sources, or an object with a "sources" array.`
+    );
+    return [];
+  }
+
+  return list.filter((s) => s.enabled !== false && validateSource(s, configPath));
+}
+
+// ── Cross-source dedupe ────────────────────────────────────────────────────────
+// The same model id can be free on several gateways (e.g. an OpenRouter ":free"
+// model is also served by Kilo Gateway). Keep one row per id: the first source
+// (config order = priority) provides the base fields, later sources only
+// backfill missing values and are recorded in "available_via" / "alt_sources".
+function dedupeModels(perSourceResults) {
+  const byId = new Map();
+
+  for (const { name, models } of perSourceResults) {
+    for (const m of models) {
+      const existing = byId.get(m.id);
+      if (!existing) {
+        byId.set(m.id, { ...m, available_via: [name] });
+      } else {
+        existing.available_via = [
+          ...new Set([...(existing.available_via ?? []), name]),
+        ];
+        if (m.source && m.source !== existing.source) {
+          existing.alt_sources = [
+            ...(existing.alt_sources ?? []),
+            { gateway: name, url: m.source },
+          ];
+        }
+        if (!existing.context_window && m.context_window)
+          existing.context_window = m.context_window;
+        if (!existing.max_output && m.max_output)
+          existing.max_output = m.max_output;
+        if (!existing.created && m.created) existing.created = m.created;
+      }
+    }
+  }
+  return [...byId.values()];
 }
 
 // ── Custom / extra providers (user-editable) ────────────────────────────────────
@@ -295,24 +501,40 @@ function loadCustomProviders(configPath) {
   return valid.map(normaliseCustomProvider);
 }
 
-// Merge custom providers on top of OpenRouter results: entries whose "id"
-// matches an existing model override it, new ids are appended.
+// Merge custom providers on top of the auto-fetched results: entries whose "id"
+// matches an existing model override it, new ids are appended. Availability
+// info collected from auto-fetch sources is preserved unless the custom entry
+// specifies its own.
 function mergeModels(base, custom) {
   const byId = new Map(base.map((m) => [m.id, m]));
   for (const c of custom) {
-    if (byId.has(c.id)) {
+    const existing = byId.get(c.id);
+    if (existing) {
       console.log(`   ↳ overriding existing entry: ${c.id}`);
     }
-    byId.set(c.id, { ...byId.get(c.id), ...c });
+    byId.set(c.id, {
+      available_via: existing?.available_via,
+      alt_sources:   existing?.alt_sources,
+      ...existing,
+      ...c,
+    });
   }
   return [...byId.values()];
 }
 
 // ── Main ───────────────────────────────────────────────────────────────────────
 async function main() {
-  console.log(`⏳ Fetching models from ${SOURCES.length} source(s): ${SOURCES.map((s) => s.name).join(", ")}…`);
-  const fetched = await runSources();
-  console.log(`✅ ${fetched.length} free models fetched across all sources`);
+  const sources = loadSources(SOURCES_PATH);
+  console.log(
+    `⏳ Fetching models from ${sources.length} source(s): ${sources.map((s) => s.name).join(", ")}…`
+  );
+
+  const perSource = await runSources(sources);
+  const fetched = dedupeModels(perSource);
+  const fetchedCount = perSource.reduce((n, r) => n + r.models.length, 0);
+  console.log(
+    `✅ ${fetchedCount} free models fetched across all sources (${fetched.length} after dedupe)`
+  );
 
   // Load and merge custom / extra providers from the editable config file.
   // These take precedence over auto-fetched entries with the same id.
@@ -327,8 +549,8 @@ async function main() {
     updated_at:        updatedAt,
     total_free_models: all.length,
     sources:           [
-      ...SOURCES.map((s) => s.name),
-      ...(customProviders.length ? [CONFIG_PATH] : []),
+      ...perSource.map((r) => r.name),
+      ...(customProviders.length ? ["config/custom-providers.json"] : []),
     ],
     models:            all,
   };

@@ -5,23 +5,32 @@ Thanks for helping keep this list accurate and complete!
 ## Adding a missing free model
 
 1. Fork this repo
-2. Edit `scripts/fetch-models.js` — find the `EXTRA_PROVIDERS` array
-3. Add your model following this shape:
+2. Edit `config/custom-providers.json` — add your model to the `providers` array:
 
-```js
+```json
 {
-  id:             "provider/model-name",   // unique slug
-  name:           "Human Readable Name",
-  provider:       "Provider Name",
-  context_window: 128_000,                 // in tokens
-  modalities:     ["text"],                // "text" | "image" | "file"
-  rate_limit:     "20 req/min",            // or "unlimited" / "varies"
-  notes:          "Optional: any caveats", // e.g. "No auth required"
-  source:         "https://provider.com/docs",
-},
+  "id":             "provider/model-name",
+  "name":           "Human Readable Name",
+  "provider":       "Provider Name",
+  "context_window": 128000,
+  "modalities":     ["text"],
+  "rate_limit":     "20 req/min",
+  "notes":          "Optional: any caveats",
+  "source":         "https://provider.com/docs"
+}
 ```
 
-4. Open a PR with title: `feat: add [Model Name] ([Provider])`
+3. Open a PR with title: `feat: add [Model Name] ([Provider])`
+
+## Adding a whole gateway (auto-fetch)
+
+If a gateway publishes its full catalog on a public `/models` endpoint, add it
+to `config/sources.json` instead of listing models by hand. Each entry needs a
+`name`, `url`, and a `format` matching its response shape (`openrouter`,
+`aihubmix`, or `openai`). See the `_schema` block in that file for all options,
+including `api_key_env` for gateways that require a key just to list models.
+Only add a new `format` normalizer in `scripts/fetch-models.js` if the catalog
+uses a response shape none of the existing ones cover.
 
 ## Rules
 
