@@ -1,8 +1,9 @@
 {
-  "updated_at": "2026-09-15T05:08:03.698Z",
-  "total_free_models": 29,
+  "updated_at": "2026-09-15T05:13:09.661Z",
+  "total_free_models": 30,
   "sources": [
-    "openrouter.ai/api/v1/models",
+    "OpenRouter",
+    "Kilo Gateway",
     "/home/runner/work/free-ai-models/free-ai-models/config/custom-providers.json"
   ],
   "models": [
@@ -126,20 +127,6 @@
       "notes": "",
       "source": "https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free",
       "created": 1780551208
-    },
-    {
-      "id": "kilo/auto-free",
-      "name": "Kilo Auto Free",
-      "provider": "Kilo AI Gateway",
-      "context_window": 1000000,
-      "max_output": null,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
-      "notes": "OpenAI-compatible; auto-routes each request to the best available free model",
-      "source": "https://kilo.ai/docs/gateway/models-and-providers",
-      "created": null
     },
     {
       "id": "dots-studio/dots-3-note-preview:free",
@@ -345,7 +332,7 @@
         "text"
       ],
       "rate_limit": "varies · can 429 during peak periods",
-      "notes": "Requires a free AIHubMix API key; OpenAI-compatible endpoint, ~38 free models total on their catalog",
+      "notes": "Requires a free AIHubMix API key; OpenAI-compatible endpoint, ~38 free models on their catalog",
       "source": "https://aihubmix.com/models",
       "created": null
     },
@@ -435,6 +422,34 @@
       "notes": "",
       "source": "https://openrouter.ai/liquid/lfm-2.5-2.6b:free",
       "created": 1786470519
+    },
+    {
+      "id": "kilo/kilo-auto/free",
+      "name": "Auto Free",
+      "provider": "Kilo Gateway",
+      "context_window": 0,
+      "max_output": null,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
+      "notes": "",
+      "source": "https://kilo.ai/docs/gateway/models-and-providers",
+      "created": null
+    },
+    {
+      "id": "kilo/openrouter/free",
+      "name": "OpenRouter Free Models Router",
+      "provider": "Kilo Gateway",
+      "context_window": 0,
+      "max_output": null,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
+      "notes": "",
+      "source": "https://kilo.ai/docs/gateway/models-and-providers",
+      "created": null
     }
   ]
 }
