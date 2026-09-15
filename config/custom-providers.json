@@ -1,5 +1,5 @@
 {
-  "_comment": "Add your own free-model providers here. Each entry follows the same shape as the built-in defaults below. This file is merged on top of the built-in EXTRA_PROVIDERS list in fetch-models.js — entries with an 'id' matching a built-in one will override it; new ids are appended.",
+  "_comment": "Add your own free-model providers here. Use this for gateways that require an API key just to list their catalog (so fetch-models.js can't auto-discover them) — e.g. AIHubMix, TokenRouter. Gateways with a public, no-auth /models endpoint (OpenRouter, Kilo Gateway) are fetched automatically instead; see SOURCES in fetch-models.js. Entries here always override an auto-fetched entry with the same 'id'.",
   "_schema": {
     "id":             "unique-slug/model-name",
     "name":           "Display name shown in the README table",
@@ -52,23 +52,13 @@
       "source":         "https://pollinations.ai"
     },
     {
-      "id":             "kilo/auto-free",
-      "name":           "Kilo Auto Free",
-      "provider":       "Kilo AI Gateway",
-      "context_window": 1000000,
-      "modalities":     ["text"],
-      "rate_limit":     "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
-      "notes":          "OpenAI-compatible; auto-routes each request to the best available free model",
-      "source":         "https://kilo.ai/docs/gateway/models-and-providers"
-    },
-    {
       "id":             "aihubmix/coding-glm-4.7-free",
       "name":           "GLM-4.7 (free)",
       "provider":       "AIHubMix",
       "context_window": 205000,
       "modalities":     ["text"],
       "rate_limit":     "varies · can 429 during peak periods",
-      "notes":          "Requires a free AIHubMix API key; OpenAI-compatible endpoint, ~38 free models total on their catalog",
+      "notes":          "Requires a free AIHubMix API key; OpenAI-compatible endpoint, ~38 free models on their catalog",
       "source":         "https://aihubmix.com/models"
     },
     {
