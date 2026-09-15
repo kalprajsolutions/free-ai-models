@@ -2,21 +2,33 @@
 /**
  * fetch-models.js
  *
- * Fetches all currently available FREE AI models from OpenRouter's public API
- * (no API key required), enriches with known metadata, merges in any custom
- * providers the user has configured, and writes:
+ * Fetches all currently available FREE AI models from every configured
+ * SOURCE (OpenRouter, Kilo Gateway, and any others you wire up — see
+ * "Auto-fetch sources" below), merges in manually-configured custom
+ * providers, and writes:
  *   - data/models.json          — current snapshot
  *   - data/history/YYYY-MM-DD.json — daily archive
  *   - README.md                 — regenerated table section
  *
  * Run: node scripts/fetch-models.js
+ * Intended to run daily (e.g. via GitHub Actions cron) since gateways add
+ * and remove free models frequently.
  *
- * Custom providers:
- *   Edit config/custom-providers.json to add, override, or remove your own
- *   free-model entries without touching this script. See that file's
- *   "_schema" block for the expected shape of each entry. You can also point
- *   at a different config file with --config=/path/to/file.json, or add an
- *   ad-hoc entry from the command line with --add (see printed help below).
+ * Auto-fetch sources (no API key needed to list models):
+ *   - OpenRouter   https://openrouter.ai/api/v1/models
+ *   - Kilo Gateway https://api.kilo.ai/api/gateway/models
+ *   Add more by pushing another entry into the SOURCES array below — each
+ *   source is just an async function that returns an array of normalised
+ *   model objects. A fetch failure in one source logs a warning and is
+ *   skipped; it never aborts the whole run.
+ *
+ * Manually-maintained providers (config/custom-providers.json):
+ *   Some gateways (AIHubMix, TokenRouter, etc.) require an API key just to
+ *   list their catalog, so they can't be safely auto-fetched here without
+ *   you providing credentials. Add/edit/remove those by hand in
+ *   config/custom-providers.json — see that file's "_schema" block. Entries
+ *   there always take precedence over auto-fetched ones with the same id.
+ *   Point at a different config file with --config=/path/to/file.json.
  */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
@@ -106,14 +118,125 @@ function fmtCtx(n) {
   return String(n);
 }
 
-// ── Fetch from OpenRouter ──────────────────────────────────────────────────────
+// ── Auto-fetch sources ───────────────────────────────────────────────────────
+// Each source is an async function that returns an array of ALREADY-normalised
+// model objects (same shape as normaliseCustomProvider() produces). Add a new
+// gateway by writing one of these and pushing it into SOURCES at the bottom.
+
 async function fetchOpenRouterModels() {
   const res = await fetch("https://openrouter.ai/api/v1/models", {
     headers: { "User-Agent": "free-ai-models-tracker/1.0 (github.com/ClawLabsAI/free-ai-models)" },
   });
   if (!res.ok) throw new Error(`OpenRouter API ${res.status}: ${res.statusText}`);
   const { data } = await res.json();
-  return data;
+
+  // Free models have pricing.prompt === "0" && pricing.completion === "0"
+  const freeModels = data.filter(
+    (m) =>
+      m.pricing &&
+      (m.pricing.prompt === "0" || parseFloat(m.pricing.prompt) === 0) &&
+      (m.pricing.completion === "0" || parseFloat(m.pricing.completion) === 0)
+  );
+
+  console.log(`✅ OpenRouter: ${freeModels.length} free models`);
+
+  return freeModels.map((m) => {
+    const providerSlug = m.id.split("/")[0];
+    const providerName =
+      providerSlug.charAt(0).toUpperCase() + providerSlug.slice(1).replace(/-/g, " ");
+    const inputModalities  = m.architecture?.input_modalities  ?? ["text"];
+    const outputModalities = m.architecture?.output_modalities ?? ["text"];
+    const allModalities    = [...new Set([...inputModalities, ...outputModalities])];
+
+    return {
+      id:             m.id,
+      name:           m.name,
+      provider:       providerName,
+      context_window: m.context_length ?? 0,
+      max_output:     m.top_provider?.max_completion_tokens ?? null,
+      modalities:     allModalities,
+      rate_limit:     getRateLimit(m.id),
+      notes:          "",
+      source:         `https://openrouter.ai/${m.id}`,
+      created:        m.created ?? null,
+    };
+  });
+}
+
+// Kilo Gateway publishes its full catalog with no API key required:
+// GET https://api.kilo.ai/api/gateway/models
+// Response shape (per model): { id, name, cost: {input, output}, limit:
+// {context, output}, modalities: {input: [...], output: [...]}, options:
+// {description}, release_date }. Free models have cost.input/output === 0,
+// or an id/name ending in "-free" / "/free" (e.g. kilo-auto/free).
+async function fetchKiloModels() {
+  const res = await fetch("https://api.kilo.ai/api/gateway/models", {
+    headers: { "User-Agent": "free-ai-models-tracker/1.0 (github.com/ClawLabsAI/free-ai-models)" },
+  });
+  if (!res.ok) throw new Error(`Kilo Gateway API ${res.status}: ${res.statusText}`);
+  const body = await res.json();
+
+  // Be defensive about response shape: could be a bare array, {data: [...]},
+  // or an object keyed by model id.
+  const list = Array.isArray(body)
+    ? body
+    : Array.isArray(body?.data)
+      ? body.data
+      : Object.values(body ?? {});
+
+  const isFree = (m) => {
+    const cost = m.cost ?? m.pricing ?? {};
+    const zeroCost =
+      (cost.input === 0 || cost.input === "0") &&
+      (cost.output === 0 || cost.output === "0");
+    const freeName = /(^|\/|-)free$/i.test(m.id ?? "") || /(^|\/|-)free$/i.test(m.name ?? "");
+    return zeroCost || freeName;
+  };
+
+  const free = list.filter(isFree);
+  console.log(`✅ Kilo Gateway: ${free.length} free models`);
+
+  return free.map((m) => {
+    const inputModalities  = m.modalities?.input  ?? ["text"];
+    const outputModalities = m.modalities?.output ?? ["text"];
+    const allModalities    = [...new Set([...inputModalities, ...outputModalities])];
+
+    return {
+      id:             `kilo/${m.id}`,
+      name:           m.name ?? m.id,
+      provider:       "Kilo Gateway",
+      context_window: m.limit?.context ?? 0,
+      max_output:     m.limit?.output ?? null,
+      modalities:     allModalities,
+      rate_limit:     "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
+      notes:          m.options?.description ?? "",
+      source:         "https://kilo.ai/docs/gateway/models-and-providers",
+      created:        m.release_date ?? null,
+    };
+  });
+}
+
+// Register every auto-fetch source here. Each entry: { name, fetch }.
+// A failure in one source is caught, logged, and skipped — it never aborts
+// the whole run (see runSources() in main()).
+const SOURCES = [
+  { name: "OpenRouter",   fetch: fetchOpenRouterModels },
+  { name: "Kilo Gateway", fetch: fetchKiloModels },
+  // Add more here, e.g.:
+  // { name: "SomeGateway", fetch: fetchSomeGatewayModels },
+];
+
+async function runSources() {
+  const results = [];
+  for (const { name, fetch: fetchFn } of SOURCES) {
+    try {
+      const models = await fetchFn();
+      results.push(...models);
+    } catch (err) {
+      console.warn(`⚠️  Skipping source "${name}" — ${err.message}`);
+    }
+  }
+  return results;
 }
 
 // ── Custom / extra providers (user-editable) ────────────────────────────────────
@@ -187,45 +310,14 @@ function mergeModels(base, custom) {
 
 // ── Main ───────────────────────────────────────────────────────────────────────
 async function main() {
-  console.log("⏳ Fetching models from OpenRouter…");
-  const allModels = await fetchOpenRouterModels();
+  console.log(`⏳ Fetching models from ${SOURCES.length} source(s): ${SOURCES.map((s) => s.name).join(", ")}…`);
+  const fetched = await runSources();
+  console.log(`✅ ${fetched.length} free models fetched across all sources`);
 
-  // Filter: free models have pricing.prompt === "0" && pricing.completion === "0"
-  const freeModels = allModels.filter(
-    (m) =>
-      m.pricing &&
-      (m.pricing.prompt === "0" || parseFloat(m.pricing.prompt) === 0) &&
-      (m.pricing.completion === "0" || parseFloat(m.pricing.completion) === 0)
-  );
-
-  console.log(`✅ Found ${freeModels.length} free models on OpenRouter`);
-
-  // Normalise OpenRouter models
-  const normalised = freeModels.map((m) => {
-    const providerSlug = m.id.split("/")[0];
-    const providerName =
-      providerSlug.charAt(0).toUpperCase() + providerSlug.slice(1).replace(/-/g, " ");
-    const inputModalities  = m.architecture?.input_modalities  ?? ["text"];
-    const outputModalities = m.architecture?.output_modalities ?? ["text"];
-    const allModalities    = [...new Set([...inputModalities, ...outputModalities])];
-
-    return {
-      id:             m.id,
-      name:           m.name,
-      provider:       providerName,
-      context_window: m.context_length ?? 0,
-      max_output:     m.top_provider?.max_completion_tokens ?? null,
-      modalities:     allModalities.filter((x) => x !== "text" || true),
-      rate_limit:     getRateLimit(m.id),
-      notes:          "",
-      source:         `https://openrouter.ai/${m.id}`,
-      created:        m.created ?? null,
-    };
-  });
-
-  // Load and merge custom / extra providers from the editable config file
+  // Load and merge custom / extra providers from the editable config file.
+  // These take precedence over auto-fetched entries with the same id.
   const customProviders = loadCustomProviders(CONFIG_PATH);
-  const all = mergeModels(normalised, customProviders);
+  const all = mergeModels(fetched, customProviders);
 
   // Sort: context window desc
   all.sort((a, b) => (b.context_window ?? 0) - (a.context_window ?? 0));
@@ -235,7 +327,7 @@ async function main() {
     updated_at:        updatedAt,
     total_free_models: all.length,
     sources:           [
-      "openrouter.ai/api/v1/models",
+      ...SOURCES.map((s) => s.name),
       ...(customProviders.length ? [CONFIG_PATH] : []),
     ],
     models:            all,
