@@ -3,12 +3,20 @@
  * fetch-models.js
  *
  * Fetches all currently available FREE AI models from OpenRouter's public API
- * (no API key required), enriches with known metadata, and writes:
+ * (no API key required), enriches with known metadata, merges in any custom
+ * providers the user has configured, and writes:
  *   - data/models.json          — current snapshot
  *   - data/history/YYYY-MM-DD.json — daily archive
  *   - README.md                 — regenerated table section
  *
  * Run: node scripts/fetch-models.js
+ *
+ * Custom providers:
+ *   Edit config/custom-providers.json to add, override, or remove your own
+ *   free-model entries without touching this script. See that file's
+ *   "_schema" block for the expected shape of each entry. You can also point
+ *   at a different config file with --config=/path/to/file.json, or add an
+ *   ad-hoc entry from the command line with --add (see printed help below).
  */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
@@ -17,6 +25,47 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
+
+// ── CLI args ─────────────────────────────────────────────────────────────────
+const args = process.argv.slice(2);
+
+function getArgValue(flag) {
+  const prefix = `--${flag}=`;
+  const hit = args.find((a) => a.startsWith(prefix));
+  return hit ? hit.slice(prefix.length) : null;
+}
+
+const CONFIG_PATH =
+  getArgValue("config") ?? join(ROOT, "config", "custom-providers.json");
+
+if (args.includes("--help") || args.includes("-h")) {
+  console.log(`
+fetch-models.js — track free AI models
+
+Usage:
+  node scripts/fetch-models.js [options]
+
+Options:
+  --config=PATH   Path to a custom providers JSON file
+                  (default: config/custom-providers.json)
+  --help, -h      Show this help
+
+To add your own provider permanently, edit:
+  ${CONFIG_PATH}
+and add an object to the "providers" array, e.g.:
+  {
+    "id":             "myhost/my-model",
+    "name":           "My Model",
+    "provider":       "My Host",
+    "context_window": 32000,
+    "modalities":     ["text"],
+    "rate_limit":     "60 req/min",
+    "notes":          "Free tier, requires signup",
+    "source":         "https://example.com"
+  }
+`);
+  process.exit(0);
+}
 
 // ── Known rate limits per provider (requests/minute unless noted) ──────────────
 const RATE_LIMITS = {
@@ -67,49 +116,74 @@ async function fetchOpenRouterModels() {
   return data;
 }
 
-// ── Additional free providers not on OpenRouter ────────────────────────────────
-const EXTRA_PROVIDERS = [
-  {
-    id:             "pollinations/mistral-nemo",
-    name:           "Mistral Nemo",
-    provider:       "Pollinations AI",
-    context_window: 128_000,
-    modalities:     ["text"],
-    rate_limit:     "unlimited (no auth)",
-    notes:          "No API key required",
-    source:         "https://pollinations.ai",
-  },
-  {
-    id:             "pollinations/mistral-small",
-    name:           "Mistral Small 3.2",
-    provider:       "Pollinations AI",
-    context_window: 128_000,
-    modalities:     ["text"],
-    rate_limit:     "unlimited (no auth)",
-    notes:          "No API key required",
-    source:         "https://pollinations.ai",
-  },
-  {
-    id:             "pollinations/gemini-2.0-flash",
-    name:           "Gemini 2.0 Flash",
-    provider:       "Pollinations AI",
-    context_window: 1_048_576,
-    modalities:     ["text", "image"],
-    rate_limit:     "unlimited (no auth)",
-    notes:          "No API key required",
-    source:         "https://pollinations.ai",
-  },
-  {
-    id:             "pollinations/openai-large",
-    name:           "GPT-4o",
-    provider:       "Pollinations AI",
-    context_window: 128_000,
-    modalities:     ["text", "image"],
-    rate_limit:     "unlimited (no auth)",
-    notes:          "No API key required",
-    source:         "https://pollinations.ai",
-  },
-];
+// ── Custom / extra providers (user-editable) ────────────────────────────────────
+const REQUIRED_FIELDS = ["id", "name", "provider", "source"];
+
+function validateProvider(p, originLabel) {
+  const missing = REQUIRED_FIELDS.filter((f) => !p[f]);
+  if (missing.length) {
+    console.warn(
+      `⚠️  Skipping custom provider from ${originLabel} — missing field(s): ${missing.join(", ")}`
+    );
+    return false;
+  }
+  return true;
+}
+
+function normaliseCustomProvider(p) {
+  return {
+    id:             p.id,
+    name:           p.name,
+    provider:       p.provider,
+    context_window: p.context_window ?? 0,
+    max_output:     p.max_output ?? null,
+    modalities:     p.modalities ?? ["text"],
+    rate_limit:     p.rate_limit ?? "varies",
+    notes:          p.notes ?? "",
+    source:         p.source,
+    created:        p.created ?? null,
+  };
+}
+
+function loadCustomProviders(configPath) {
+  if (!existsSync(configPath)) {
+    console.log(`ℹ️  No custom provider config found at ${configPath} — skipping (this is optional).`);
+    return [];
+  }
+
+  let raw;
+  try {
+    raw = JSON.parse(readFileSync(configPath, "utf8"));
+  } catch (err) {
+    console.warn(`⚠️  Could not parse ${configPath}: ${err.message}. Skipping custom providers.`);
+    return [];
+  }
+
+  const list = Array.isArray(raw) ? raw : raw.providers;
+  if (!Array.isArray(list)) {
+    console.warn(
+      `⚠️  ${configPath} must be either a JSON array of providers, or an object with a "providers" array. Skipping.`
+    );
+    return [];
+  }
+
+  const valid = list.filter((p) => validateProvider(p, configPath));
+  console.log(`✅ Loaded ${valid.length} custom provider(s) from ${configPath}`);
+  return valid.map(normaliseCustomProvider);
+}
+
+// Merge custom providers on top of OpenRouter results: entries whose "id"
+// matches an existing model override it, new ids are appended.
+function mergeModels(base, custom) {
+  const byId = new Map(base.map((m) => [m.id, m]));
+  for (const c of custom) {
+    if (byId.has(c.id)) {
+      console.log(`   ↳ overriding existing entry: ${c.id}`);
+    }
+    byId.set(c.id, { ...byId.get(c.id), ...c });
+  }
+  return [...byId.values()];
+}
 
 // ── Main ───────────────────────────────────────────────────────────────────────
 async function main() {
@@ -149,8 +223,9 @@ async function main() {
     };
   });
 
-  // Merge extra providers
-  const all = [...normalised, ...EXTRA_PROVIDERS];
+  // Load and merge custom / extra providers from the editable config file
+  const customProviders = loadCustomProviders(CONFIG_PATH);
+  const all = mergeModels(normalised, customProviders);
 
   // Sort: context window desc
   all.sort((a, b) => (b.context_window ?? 0) - (a.context_window ?? 0));
@@ -159,7 +234,10 @@ async function main() {
   const snapshot = {
     updated_at:        updatedAt,
     total_free_models: all.length,
-    sources:           ["openrouter.ai/api/v1/models", "pollinations.ai"],
+    sources:           [
+      "openrouter.ai/api/v1/models",
+      ...(customProviders.length ? [CONFIG_PATH] : []),
+    ],
     models:            all,
   };
 
