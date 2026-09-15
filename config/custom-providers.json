@@ -1,0 +1,85 @@
+{
+  "_comment": "Add your own free-model providers here. Each entry follows the same shape as the built-in defaults below. This file is merged on top of the built-in EXTRA_PROVIDERS list in fetch-models.js — entries with an 'id' matching a built-in one will override it; new ids are appended.",
+  "_schema": {
+    "id":             "unique-slug/model-name",
+    "name":           "Display name shown in the README table",
+    "provider":       "Provider / company name",
+    "context_window": "Context window size in tokens (number)",
+    "modalities":     "Array of: text, image, file",
+    "rate_limit":     "Human-readable rate limit string",
+    "notes":          "Optional short note",
+    "source":         "URL to the provider / model page"
+  },
+  "providers": [
+    {
+      "id":             "pollinations/mistral-nemo",
+      "name":           "Mistral Nemo",
+      "provider":       "Pollinations AI",
+      "context_window": 128000,
+      "modalities":     ["text"],
+      "rate_limit":     "unlimited (no auth)",
+      "notes":          "No API key required",
+      "source":         "https://pollinations.ai"
+    },
+    {
+      "id":             "pollinations/mistral-small",
+      "name":           "Mistral Small 3.2",
+      "provider":       "Pollinations AI",
+      "context_window": 128000,
+      "modalities":     ["text"],
+      "rate_limit":     "unlimited (no auth)",
+      "notes":          "No API key required",
+      "source":         "https://pollinations.ai"
+    },
+    {
+      "id":             "pollinations/gemini-2.0-flash",
+      "name":           "Gemini 2.0 Flash",
+      "provider":       "Pollinations AI",
+      "context_window": 1048576,
+      "modalities":     ["text", "image"],
+      "rate_limit":     "unlimited (no auth)",
+      "notes":          "No API key required",
+      "source":         "https://pollinations.ai"
+    },
+    {
+      "id":             "pollinations/openai-large",
+      "name":           "GPT-4o",
+      "provider":       "Pollinations AI",
+      "context_window": 128000,
+      "modalities":     ["text", "image"],
+      "rate_limit":     "unlimited (no auth)",
+      "notes":          "No API key required",
+      "source":         "https://pollinations.ai"
+    },
+    {
+      "id":             "kilo/auto-free",
+      "name":           "Kilo Auto Free",
+      "provider":       "Kilo AI Gateway",
+      "context_window": 1000000,
+      "modalities":     ["text"],
+      "rate_limit":     "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
+      "notes":          "OpenAI-compatible; auto-routes each request to the best available free model",
+      "source":         "https://kilo.ai/docs/gateway/models-and-providers"
+    },
+    {
+      "id":             "aihubmix/coding-glm-4.7-free",
+      "name":           "GLM-4.7 (free)",
+      "provider":       "AIHubMix",
+      "context_window": 205000,
+      "modalities":     ["text"],
+      "rate_limit":     "varies · can 429 during peak periods",
+      "notes":          "Requires a free AIHubMix API key; OpenAI-compatible endpoint, ~38 free models total on their catalog",
+      "source":         "https://aihubmix.com/models"
+    },
+    {
+      "id":             "tokenrouter/z-ai/glm-5.3-free",
+      "name":           "GLM-5.3 (free)",
+      "provider":       "TokenRouter",
+      "context_window": 1048576,
+      "modalities":     ["text"],
+      "rate_limit":     "varies",
+      "notes":          "Requires TOKENROUTER_API_KEY; OpenAI-compatible endpoint at api.tokenrouter.com/v1",
+      "source":         "https://mastra.ai/models/providers/tokenrouter"
+    }
+  ]
+}
