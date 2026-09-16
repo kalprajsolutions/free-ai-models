@@ -57,7 +57,7 @@ Each model entry includes:
 ## Free models (auto-updated daily)
 
 <!-- TABLE_START -->
-> Last updated: **Tue, 15 Sep 2026 06:08:33 UTC** · 85 models tracked
+> Last updated: **Wed, 16 Sep 2026 09:05:55 UTC** · 86 models tracked
 
 | # | Model | Provider | Context | Modalities | Rate Limit | Source |
 |---|-------|----------|---------|------------|------------|--------|
@@ -143,9 +143,10 @@ Each model entry includes:
 | 80 | **Mistral Small 3.2** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
 | 81 | **GPT-4o** | Pollinations AI | 128K | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
 | 82 | **LiquidAI: LFM2.5-2.6B (free)** | Liquid | 66K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-2.5-2.6b:free) |
-| 83 | **GPT Image 2 (free)** | Openai | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 84 | **Gemini 3.1 Flash Image Preview (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 85 | **GPT Live Transcribe** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 83 | **Z.ai: GLM 5.2 (free)** | Z ai | 33K | 💬 text | varies | [link](https://openrouter.ai/z-ai/glm-5.2:free) |
+| 84 | **GPT Image 2 (free)** | Openai | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 85 | **Gemini 3.1 Flash Image Preview (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 86 | **GPT Live Transcribe** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
 <!-- TABLE_END -->
 
 ---
