@@ -57,7 +57,7 @@ Each model entry includes:
 ## Free models (auto-updated daily)
 
 <!-- TABLE_START -->
-> Last updated: **Tue, 22 Sep 2026 09:02:57 UTC** · 77 models tracked
+> Last updated: **Wed, 23 Sep 2026 09:06:23 UTC** · 77 models tracked
 
 | # | Model | Provider | Context | Modalities | Rate Limit | Source |
 |---|-------|----------|---------|------------|------------|--------|
@@ -65,9 +65,9 @@ Each model entry includes:
 | 2 | **Thinking Machines: Inkling (free)** | Thinkingmachines | 1M | 💬 text, 🖼️ vision, audio | varies | [link](https://openrouter.ai/thinkingmachines/inkling:free) |
 | 3 | **Google: Lyria 3 Pro Preview** | Google | 1M | 💬 text, 🖼️ vision, audio | varies | [link](https://openrouter.ai/google/lyria-3-pro-preview) |
 | 4 | **Google: Lyria 3 Clip Preview** | Google | 1M | 💬 text, 🖼️ vision, audio | varies | [link](https://openrouter.ai/google/lyria-3-clip-preview) |
-| 5 | **Xiaomi Mimo V2.6 Pro (free)** | AIHubMix | 1M | 💬 text, 🖼️ vision, audio, video | varies | [link](https://aihubmix.com/models) |
+| 5 | **Xiaomi Mimo V2.6 Pro (free)** | Xiaomi | 1M | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
 | 6 | **Coding GLM 5.3 (free)** | Zhipu | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 7 | **Xiaomi Mimo V2.6 Flash (free)** | AIHubMix | 1M | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
+| 7 | **Xiaomi Mimo V2.6 Flash (free)** | Xiaomi | 1M | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
 | 8 | **Nemotron 3.5 Lightning (free)** | Nvidia | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 9 | **Coding Kimi K3 (free)** | Moonshot | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
 | 10 | **Nemotron 3 Super 120B A12B (free)** | Nvidia | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
