@@ -57,7 +57,7 @@ Each model entry includes:
 ## Free models (auto-updated daily)
 
 <!-- TABLE_START -->
-> Last updated: **Wed, 23 Sep 2026 09:06:23 UTC** · 77 models tracked
+> Last updated: **Thu, 24 Sep 2026 09:00:55 UTC** · 77 models tracked
 
 | # | Model | Provider | Context | Modalities | Rate Limit | Source |
 |---|-------|----------|---------|------------|------------|--------|
@@ -77,16 +77,16 @@ Each model entry includes:
 | 14 | **Xiaomi Mimo V2.5 (free)** | Xiaomi | 1M | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
 | 15 | **Xiaomi Mimo V2.5 Pro (free)** | Xiaomi | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 16 | **Gemini 2.0 Flash** | Pollinations AI | 1M | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
-| 17 | **NVIDIA: Nemotron 3.5 Lightning (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-lightning:free) |
-| 18 | **NVIDIA: Nemotron 3 Ultra (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free) |
-| 19 | **Coding GLM 5.3 Flash (free)** | Zhipu | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
-| 20 | **Coding GLM 5.2 (free)** | Zhipu | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 21 | **Coding MiniMax M3 (free)** | Minimax | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
-| 22 | **Xiaomi Mimo V2 Pro (free)** | Xiaomi | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 23 | **Qwen3.6 Plus Preview (free)** | Alibaba | 1M | 💬 text | 20 req/min | [link](https://aihubmix.com/models) |
-| 24 | **Dots 3 Note Preview (free)** | Dots studio | 524K | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
-| 25 | **Dots Studio: Dots3-Note Preview (free)** | Dots studio | 512K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/dots-studio/dots-3-note-preview:free) |
-| 26 | **inclusionAI: Ling 3.0 Flash VL (free)** | Inclusionai | 262K | 💬 text, 🖼️ vision, video | varies | [link](https://openrouter.ai/inclusionai/ling-3.0-flash-vl:free) |
+| 17 | **Space Bunny Alpha** | Stealth | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://openrouter.ai/stealth/space-bunny-alpha) |
+| 18 | **NVIDIA: Nemotron 3.5 Lightning (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-lightning:free) |
+| 19 | **NVIDIA: Nemotron 3 Ultra (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free) |
+| 20 | **Coding GLM 5.3 Flash (free)** | Zhipu | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 21 | **Coding GLM 5.2 (free)** | Zhipu | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 22 | **Coding MiniMax M3 (free)** | Minimax | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 23 | **Xiaomi Mimo V2 Pro (free)** | Xiaomi | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 24 | **Qwen3.6 Plus Preview (free)** | Alibaba | 1M | 💬 text | 20 req/min | [link](https://aihubmix.com/models) |
+| 25 | **Dots 3 Note Preview (free)** | Dots studio | 524K | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
+| 26 | **Dots Studio: Dots3-Note Preview (free)** | Dots studio | 512K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/dots-studio/dots-3-note-preview:free) |
 | 27 | **Nex AGI: Nex-N2.5-Mini (free)** | Nex agi | 262K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/nex-agi/nex-n2.5-mini:free) |
 | 28 | **Nex AGI: Nex-N2.5-Pro (free)** | Nex agi | 262K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/nex-agi/nex-n2.5-pro:free) |
 | 29 | **inclusionAI: Ling 3.0 Flash Sante (free)** | Inclusionai | 262K | 💬 text | varies | [link](https://openrouter.ai/inclusionai/ling-3.0-flash-sante:free) |
