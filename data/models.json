@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T10:25:49.010Z",
+  "updated_at": "2026-10-11T10:37:18.957Z",
   "total_free_models": 74,
   "sources": [
     "OpenRouter",
@@ -688,24 +688,6 @@
       ]
     },
     {
-      "id": "aihubmix/intern-s2-free",
-      "name": "Intern S2 (free)",
-      "provider": "AIHubMix",
-      "context_window": 262144,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "image"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": "2026-05-14",
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
       "id": "aihubmix/union-alpha-free",
       "name": "Union Alpha (free)",
       "provider": "AIHubMix",
@@ -719,6 +701,24 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/intern-s2-free",
+      "name": "Intern S2 (free)",
+      "provider": "AIHubMix",
+      "context_window": 262144,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-05-14",
       "available_via": [
         "AIHubMix"
       ]

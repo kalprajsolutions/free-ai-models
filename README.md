@@ -57,7 +57,7 @@ Each model entry includes:
 ## Free models (auto-updated daily)
 
 <!-- TABLE_START -->
-> Last updated: **Sat, 10 Oct 2026 10:25:49 UTC** · 74 models tracked
+> Last updated: **Sun, 11 Oct 2026 10:37:18 UTC** · 74 models tracked
 
 | # | Model | Provider | Context | Modalities | Rate Limit | Source |
 |---|-------|----------|---------|------------|------------|--------|
@@ -95,8 +95,8 @@ Each model entry includes:
 | 32 | **Google: Gemma 4 31B (free)** | Google | 262K | 🖼️ vision, 💬 text, video | varies | [link](https://openrouter.ai/google/gemma-4-31b-it:free) |
 | 33 | **NVIDIA: Nemotron 3 Super (free)** | Nvidia | 262K | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free) |
 | 34 | **Agents A1 (free)** | AIHubMix | 262K | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 35 | **Intern S2 (free)** | AIHubMix | 262K | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 36 | **Union Alpha (free)** | AIHubMix | 262K | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 35 | **Union Alpha (free)** | AIHubMix | 262K | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 36 | **Intern S2 (free)** | AIHubMix | 262K | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
 | 37 | **Ling 3.0 Tiny (free)** | Inclusionai | 262K | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 38 | **Ling 3.0 Flash (free)** | Inclusionai | 262K | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 39 | **Nemotron 3 Nano Omni 30B A3B (reasoning) (free)** | Nvidia | 262K | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
