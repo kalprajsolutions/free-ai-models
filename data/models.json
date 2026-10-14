@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-13T11:26:27.835Z",
-  "total_free_models": 74,
+  "updated_at": "2026-10-14T09:18:39.095Z",
+  "total_free_models": 72,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -516,47 +516,6 @@
           "gateway": "Kilo Gateway",
           "url": "https://kilo.ai/docs/gateway/models-and-providers"
         }
-      ]
-    },
-    {
-      "id": "inclusionai/ling-3.1-flash",
-      "name": "inclusionAI: Ling 3.1 Flash",
-      "provider": "Inclusionai",
-      "context_window": 262144,
-      "max_output": 235929,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://openrouter.ai/inclusionai/ling-3.1-flash",
-      "created": 1790950024,
-      "available_via": [
-        "OpenRouter",
-        "Kilo Gateway"
-      ],
-      "alt_sources": [
-        {
-          "gateway": "Kilo Gateway",
-          "url": "https://kilo.ai/docs/gateway/models-and-providers"
-        }
-      ]
-    },
-    {
-      "id": "apodex/apodex-1.1-mini:free",
-      "name": "Apodex: Apodex 1.1 Mini (free)",
-      "provider": "Apodex",
-      "context_window": 262144,
-      "max_output": 235929,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://openrouter.ai/apodex/apodex-1.1-mini:free",
-      "created": 1790875335,
-      "available_via": [
-        "OpenRouter"
       ]
     },
     {
