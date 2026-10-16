@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-15T08:53:45.457Z",
-  "total_free_models": 72,
+  "updated_at": "2026-10-16T08:46:20.821Z",
+  "total_free_models": 74,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -319,6 +319,32 @@
       "created": null
     },
     {
+      "id": "nvidia/nemotron-3.5-super-vl:free",
+      "name": "NVIDIA: Nemotron 3.5 Super VL (free)",
+      "provider": "Nvidia",
+      "context_window": 1000000,
+      "max_output": 131072,
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "rate_limit": "40 req/min",
+      "notes": "",
+      "source": "https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free",
+      "created": 1792076662,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
       "id": "nvidia/nemotron-3.5-lightning:free",
       "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
       "provider": "Nvidia",
@@ -364,24 +390,6 @@
           "gateway": "Kilo Gateway",
           "url": "https://kilo.ai/docs/gateway/models-and-providers"
         }
-      ]
-    },
-    {
-      "id": "stepfun/step-5-preview-free",
-      "name": "StepFun: Step 5 Preview (free)",
-      "provider": "Stepfun",
-      "context_window": 1000000,
-      "max_output": 64000,
-      "modalities": [
-        "text",
-        "image"
-      ],
-      "rate_limit": "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
-      "notes": "",
-      "source": "https://kilo.ai/docs/gateway/models-and-providers",
-      "created": 1756238927,
-      "available_via": [
-        "Kilo Gateway"
       ]
     },
     {
@@ -1353,6 +1361,40 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": "2026-09-14",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/qwen3.8-flash-free",
+      "name": "Qwen3.8 Flash (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "20 req/min",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/qwen3.8-max-free",
+      "name": "Qwen3.8 Max (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "20 req/min",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
       "available_via": [
         "AIHubMix"
       ]

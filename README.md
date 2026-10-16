@@ -57,7 +57,7 @@ Each model entry includes:
 ## Free models (auto-updated daily)
 
 <!-- TABLE_START -->
-> Last updated: **Thu, 15 Oct 2026 08:53:45 UTC** · 72 models tracked
+> Last updated: **Fri, 16 Oct 2026 08:46:20 UTC** · 74 models tracked
 
 | # | Model | Provider | Context | Modalities | Rate Limit | Source |
 |---|-------|----------|---------|------------|------------|--------|
@@ -77,9 +77,9 @@ Each model entry includes:
 | 14 | **Xiaomi Mimo V2.5 (free)** | Xiaomi | 1M | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
 | 15 | **Xiaomi Mimo V2.5 Pro (free)** | Xiaomi | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 16 | **Gemini 2.0 Flash** | Pollinations AI | 1M | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
-| 17 | **NVIDIA: Nemotron 3.5 Lightning (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-lightning:free) |
-| 18 | **NVIDIA: Nemotron 3 Ultra (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free) |
-| 19 | **StepFun: Step 5 Preview (free)** | Stepfun | 1M | 💬 text, 🖼️ vision | 200 req/hour (anonymous, no auth) · higher for signed-in accounts | [link](https://kilo.ai/docs/gateway/models-and-providers) |
+| 17 | **NVIDIA: Nemotron 3.5 Super VL (free)** | Nvidia | 1M | 💬 text, 🖼️ vision, video | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free) |
+| 18 | **NVIDIA: Nemotron 3.5 Lightning (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-lightning:free) |
+| 19 | **NVIDIA: Nemotron 3 Ultra (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free) |
 | 20 | **Coding GLM 5.3 Flash (free)** | Zhipu | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
 | 21 | **Coding GLM 5.2 (free)** | Zhipu | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 22 | **Coding MiniMax M3 (free)** | Minimax | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
@@ -132,7 +132,9 @@ Each model entry includes:
 | 69 | **LiquidAI: LFM2.5-2.6B (free)** | Liquid | 66K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-2.5-2.6b:free) |
 | 70 | **Decision Model Preview** | AIHubMix | 64K | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 71 | **Jina Ocr V1** | AIHubMix | 32K | 🖼️ vision, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 72 | **GPT Live Transcribe** | Openai | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 72 | **Qwen3.8 Flash (free)** | AIHubMix | — | 💬 text | 20 req/min | [link](https://aihubmix.com/models) |
+| 73 | **Qwen3.8 Max (free)** | AIHubMix | — | 💬 text | 20 req/min | [link](https://aihubmix.com/models) |
+| 74 | **GPT Live Transcribe** | Openai | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
 <!-- TABLE_END -->
 
 ---
