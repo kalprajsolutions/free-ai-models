@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-18T08:34:09.864Z",
-  "total_free_models": 76,
+  "updated_at": "2026-10-19T09:37:14.210Z",
+  "total_free_models": 78,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -310,7 +310,10 @@
       "context_window": 1048576,
       "max_output": 131072,
       "modalities": [
-        "text"
+        "text",
+        "image",
+        "video",
+        "audio"
       ],
       "rate_limit": "varies",
       "notes": "",
@@ -347,7 +350,10 @@
       "context_window": 1048576,
       "max_output": 131072,
       "modalities": [
-        "text"
+        "text",
+        "image",
+        "video",
+        "audio"
       ],
       "rate_limit": "varies",
       "notes": "",
@@ -444,6 +450,44 @@
           "gateway": "Kilo Gateway",
           "url": "https://kilo.ai/docs/gateway/models-and-providers"
         }
+      ]
+    },
+    {
+      "id": "aihubmix/qwen3.8-flash-free",
+      "name": "Qwen3.8 Flash (free)",
+      "provider": "Alibaba",
+      "context_window": 1000000,
+      "max_output": 131072,
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "rate_limit": "20 req/min",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/qwen3.8-max-free",
+      "name": "Qwen3.8 Max (free)",
+      "provider": "Alibaba",
+      "context_window": 1000000,
+      "max_output": 131072,
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "rate_limit": "20 req/min",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
       ]
     },
     {
@@ -1407,40 +1451,6 @@
       ]
     },
     {
-      "id": "aihubmix/qwen3.8-flash-free",
-      "name": "Qwen3.8 Flash (free)",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "20 req/min",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/qwen3.8-max-free",
-      "name": "Qwen3.8 Max (free)",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "20 req/min",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
       "id": "aihubmix/gpt-live-transcribe",
       "name": "GPT Live Transcribe",
       "provider": "Openai",
@@ -1454,6 +1464,48 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": "2026-07-28",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/wan3.0-video-free",
+      "name": "Wan3.0 Video (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "file"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/wan3.0-video-prime-free",
+      "name": "Wan3.0 Video Prime (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image",
+        "audio",
+        "video",
+        "file"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
       "available_via": [
         "AIHubMix"
       ]
