@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-20T09:09:34.650Z",
-  "total_free_models": 79,
+  "updated_at": "2026-10-21T09:08:32.067Z",
+  "total_free_models": 75,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -24,14 +24,7 @@
       "source": "https://openrouter.ai/thinkingmachines/inkling-small:free",
       "created": 1785443117,
       "available_via": [
-        "OpenRouter",
-        "Kilo Gateway"
-      ],
-      "alt_sources": [
-        {
-          "gateway": "Kilo Gateway",
-          "url": "https://kilo.ai/docs/gateway/models-and-providers"
-        }
+        "OpenRouter"
       ]
     },
     {
@@ -279,86 +272,6 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": "2025-12-15",
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/xiaomi-mimo-v2-omni-free",
-      "name": "Xiaomi Mimo V2 Omni (free)",
-      "provider": "Xiaomi",
-      "context_window": 1048576,
-      "max_output": 131072,
-      "modalities": [
-        "text",
-        "image",
-        "video",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/xiaomi-mimo-v2-pro-free",
-      "name": "Xiaomi Mimo V2 Pro (free)",
-      "provider": "Xiaomi",
-      "context_window": 1048576,
-      "max_output": 131072,
-      "modalities": [
-        "text",
-        "image",
-        "video",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/xiaomi-mimo-v2.5-free",
-      "name": "Xiaomi Mimo V2.5 (free)",
-      "provider": "Xiaomi",
-      "context_window": 1048576,
-      "max_output": 131072,
-      "modalities": [
-        "text",
-        "image",
-        "video",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": "2026-04-22",
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/xiaomi-mimo-v2.5-pro-free",
-      "name": "Xiaomi Mimo V2.5 Pro (free)",
-      "provider": "Xiaomi",
-      "context_window": 1048576,
-      "max_output": 131072,
-      "modalities": [
-        "text",
-        "image",
-        "video",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": "2026-04-22",
       "available_via": [
         "AIHubMix"
       ]
