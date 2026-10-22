@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-21T09:08:32.067Z",
-  "total_free_models": 75,
+  "updated_at": "2026-10-22T09:11:04.676Z",
+  "total_free_models": 76,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -535,6 +535,30 @@
       "notes": "",
       "source": "https://openrouter.ai/dots-studio/dots-3-note-preview:free",
       "created": 1786680361,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "recursive/flint-v1.0:free",
+      "name": "Recursive: Flint (free)",
+      "provider": "Recursive",
+      "context_window": 262144,
+      "max_output": 235929,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/recursive/flint-v1.0:free",
+      "created": 1792622765,
       "available_via": [
         "OpenRouter",
         "Kilo Gateway"
