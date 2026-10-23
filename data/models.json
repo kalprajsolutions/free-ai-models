@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-22T09:11:04.676Z",
-  "total_free_models": 76,
+  "updated_at": "2026-10-23T09:07:26.445Z",
+  "total_free_models": 68,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -260,23 +260,6 @@
       ]
     },
     {
-      "id": "aihubmix/nemotron-3-nano-30b-a3b-free",
-      "name": "Nemotron 3 Nano 30B A3B (free)",
-      "provider": "Nvidia",
-      "context_window": 1048576,
-      "max_output": 1048576,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": "2025-12-15",
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
       "id": "pollinations/gemini-2.0-flash",
       "name": "Gemini 2.0 Flash",
       "provider": "Pollinations AI",
@@ -290,32 +273,6 @@
       "notes": "No API key required",
       "source": "https://pollinations.ai",
       "created": null
-    },
-    {
-      "id": "minimax/minimax-m3.1-flash:free",
-      "name": "MiniMax: MiniMax M3.1 Flash (free)",
-      "provider": "Minimax",
-      "context_window": 1000000,
-      "max_output": 524288,
-      "modalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://openrouter.ai/minimax/minimax-m3.1-flash:free",
-      "created": 1792379569,
-      "available_via": [
-        "OpenRouter",
-        "Kilo Gateway"
-      ],
-      "alt_sources": [
-        {
-          "gateway": "Kilo Gateway",
-          "url": "https://kilo.ai/docs/gateway/models-and-providers"
-        }
-      ]
     },
     {
       "id": "nvidia/nemotron-3.5-super-vl:free",
@@ -723,24 +680,6 @@
       ]
     },
     {
-      "id": "aihubmix/union-alpha-free",
-      "name": "Union Alpha (free)",
-      "provider": "AIHubMix",
-      "context_window": 262144,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "image"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
       "id": "aihubmix/intern-s2-free",
       "name": "Intern S2 (free)",
       "provider": "AIHubMix",
@@ -771,23 +710,6 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": "2026-08-06",
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/ling-3.0-flash-free",
-      "name": "Ling 3.0 Flash (free)",
-      "provider": "Inclusionai",
-      "context_window": 262144,
-      "max_output": 0,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": "2026-07-23",
       "available_via": [
         "AIHubMix"
       ]
@@ -934,23 +856,6 @@
       ]
     },
     {
-      "id": "aihubmix/hy3-free",
-      "name": "Hy3 (free)",
-      "provider": "Tencent",
-      "context_window": 256000,
-      "max_output": 128000,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": "2026-07-06",
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
       "id": "aihubmix/north-mini-code-free",
       "name": "North Mini Code (free)",
       "provider": "Cohere",
@@ -999,23 +904,6 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": "2025-12-16",
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/minimax-m2.7-free",
-      "name": "MiniMax M2.7 (free)",
-      "provider": "Minimax",
-      "context_window": 204800,
-      "max_output": 204800,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": "2026-03-18",
       "available_via": [
         "AIHubMix"
       ]
@@ -1228,42 +1116,6 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": "2026-08-12",
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/nemotron-nano-9b-v2-free",
-      "name": "Nemotron Nano 9B V2 (free)",
-      "provider": "Nvidia",
-      "context_window": 131072,
-      "max_output": 0,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": "2025-08-18",
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/nemotron-nano-12b-v2-vl-free",
-      "name": "Nemotron Nano 12B V2 VL (free)",
-      "provider": "Nvidia",
-      "context_window": 131072,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": "2025-10-28",
       "available_via": [
         "AIHubMix"
       ]
