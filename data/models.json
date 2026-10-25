@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-24T08:40:23.733Z",
-  "total_free_models": 69,
+  "updated_at": "2026-10-25T08:57:42.953Z",
+  "total_free_models": 71,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -204,23 +204,6 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": "2026-07-16",
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/nemotron-3-super-120b-a12b-free",
-      "name": "Nemotron 3 Super 120B A12B (free)",
-      "provider": "Nvidia",
-      "context_window": 1048576,
-      "max_output": 0,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": "2026-03-11",
       "available_via": [
         "AIHubMix"
       ]
@@ -1287,6 +1270,24 @@
       ]
     },
     {
+      "id": "aihubmix/nemotron-3.5-super-vl-free",
+      "name": "Nemotron 3.5 Super VL (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
       "id": "aihubmix/gpt-live-transcribe",
       "name": "GPT Live Transcribe",
       "provider": "Openai",
@@ -1300,6 +1301,40 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": "2026-07-28",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/flint-v1.0-free",
+      "name": "Flint V1.0 (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/xing4.0-29b-a4b-free",
+      "name": "Xing4.0 29B A4B (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
       "available_via": [
         "AIHubMix"
       ]
