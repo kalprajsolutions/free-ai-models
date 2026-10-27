@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-26T09:45:36.512Z",
-  "total_free_models": 71,
+  "updated_at": "2026-10-27T09:37:58.648Z",
+  "total_free_models": 66,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -332,44 +332,6 @@
       ]
     },
     {
-      "id": "aihubmix/qwen3.8-flash-free",
-      "name": "Qwen3.8 Flash (free)",
-      "provider": "Alibaba",
-      "context_window": 1000000,
-      "max_output": 131072,
-      "modalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "rate_limit": "20 req/min",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/qwen3.8-max-free",
-      "name": "Qwen3.8 Max (free)",
-      "provider": "Alibaba",
-      "context_window": 1000000,
-      "max_output": 131072,
-      "modalities": [
-        "text",
-        "image",
-        "video"
-      ],
-      "rate_limit": "20 req/min",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
       "id": "aihubmix/coding-glm-5.3-flash-free",
       "name": "Coding GLM 5.3 Flash (free)",
       "provider": "Zhipu",
@@ -618,30 +580,6 @@
       "created": 1775148486,
       "available_via": [
         "OpenRouter"
-      ]
-    },
-    {
-      "id": "nvidia/nemotron-3-super-120b-a12b:free",
-      "name": "NVIDIA: Nemotron 3 Super (free)",
-      "provider": "Nvidia",
-      "context_window": 262144,
-      "max_output": 235929,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "40 req/min",
-      "notes": "",
-      "source": "https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free",
-      "created": 1773245239,
-      "available_via": [
-        "OpenRouter",
-        "Kilo Gateway"
-      ],
-      "alt_sources": [
-        {
-          "gateway": "Kilo Gateway",
-          "url": "https://kilo.ai/docs/gateway/models-and-providers"
-        }
       ]
     },
     {
@@ -1330,48 +1268,6 @@
       "max_output": 0,
       "modalities": [
         "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/wan3.0-video-free",
-      "name": "Wan3.0 Video (free)",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "image",
-        "audio",
-        "video",
-        "file"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/wan3.0-video-prime-free",
-      "name": "Wan3.0 Video Prime (free)",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "image",
-        "audio",
-        "video",
-        "file"
       ],
       "rate_limit": "varies",
       "notes": "",
