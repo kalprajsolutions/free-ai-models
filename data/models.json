@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-27T09:37:58.648Z",
-  "total_free_models": 66,
+  "updated_at": "2026-10-28T10:22:02.927Z",
+  "total_free_models": 69,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -1208,6 +1208,57 @@
       ]
     },
     {
+      "id": "aihubmix/elephant-1-free",
+      "name": "Elephant 1 (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/span-01-lite-free",
+      "name": "Span 01 Lite (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/mammoth-1-free",
+      "name": "Mammoth 1 (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
       "id": "aihubmix/nemotron-3.5-super-vl-free",
       "name": "Nemotron 3.5 Super VL (free)",
       "provider": "AIHubMix",
@@ -1244,8 +1295,8 @@
       ]
     },
     {
-      "id": "aihubmix/flint-v1.0-free",
-      "name": "Flint V1.0 (free)",
+      "id": "aihubmix/xing4.0-29b-a4b-free",
+      "name": "Xing4.0 29B A4B (free)",
       "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,
@@ -1261,8 +1312,8 @@
       ]
     },
     {
-      "id": "aihubmix/xing4.0-29b-a4b-free",
-      "name": "Xing4.0 29B A4B (free)",
+      "id": "aihubmix/flint-v1.0-free",
+      "name": "Flint V1.0 (free)",
       "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,

@@ -57,7 +57,7 @@ Each model entry includes:
 ## Free models (auto-updated daily)
 
 <!-- TABLE_START -->
-> Last updated: **Tue, 27 Oct 2026 09:37:58 UTC** · 66 models tracked
+> Last updated: **Wed, 28 Oct 2026 10:22:02 UTC** · 69 models tracked
 
 | # | Model | Provider | Context | Modalities | Rate Limit | Source |
 |---|-------|----------|---------|------------|------------|--------|
@@ -123,10 +123,13 @@ Each model entry includes:
 | 60 | **LiquidAI: LFM2.5-2.6B (free)** | Liquid | 66K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-2.5-2.6b:free) |
 | 61 | **Decision Model Preview** | AIHubMix | 64K | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 62 | **Jina Ocr V1** | AIHubMix | 32K | 🖼️ vision, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 63 | **Nemotron 3.5 Super VL (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 64 | **GPT Live Transcribe** | Openai | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 65 | **Flint V1.0 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 66 | **Xing4.0 29B A4B (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 63 | **Elephant 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 64 | **Span 01 Lite (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 65 | **Mammoth 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 66 | **Nemotron 3.5 Super VL (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 67 | **GPT Live Transcribe** | Openai | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 68 | **Xing4.0 29B A4B (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 69 | **Flint V1.0 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
 <!-- TABLE_END -->
 
 ---
