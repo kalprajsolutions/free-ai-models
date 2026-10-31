@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-30T10:43:15.603Z",
-  "total_free_models": 69,
+  "updated_at": "2026-10-31T10:11:51.332Z",
+  "total_free_models": 70,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -329,6 +329,23 @@
           "gateway": "Kilo Gateway",
           "url": "https://kilo.ai/docs/gateway/models-and-providers"
         }
+      ]
+    },
+    {
+      "id": "inclusionai/ling-3.1-flash-1019-free",
+      "name": "inclusionAI: Ling 3.1 Flash 1019 (free)",
+      "provider": "Inclusionai",
+      "context_window": 1000000,
+      "max_output": 262144,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
+      "notes": "",
+      "source": "https://kilo.ai/docs/gateway/models-and-providers",
+      "created": 1756238927,
+      "available_via": [
+        "Kilo Gateway"
       ]
     },
     {
