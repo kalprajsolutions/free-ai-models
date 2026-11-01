@@ -1,0 +1,1267 @@
+{
+  "updated_at": "2026-11-01T11:02:55.489Z",
+  "total_free_models": 66,
+  "sources": [
+    "OpenRouter",
+    "Kilo Gateway",
+    "AIHubMix",
+    "config/custom-providers.json"
+  ],
+  "models": [
+    {
+      "id": "thinkingmachines/inkling-small:free",
+      "name": "Thinking Machines: Inkling Small (free)",
+      "provider": "Thinkingmachines",
+      "context_window": 1048576,
+      "max_output": 262144,
+      "modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/thinkingmachines/inkling-small:free",
+      "created": 1785443117,
+      "available_via": [
+        "OpenRouter"
+      ]
+    },
+    {
+      "id": "thinkingmachines/inkling:free",
+      "name": "Thinking Machines: Inkling (free)",
+      "provider": "Thinkingmachines",
+      "context_window": 1048576,
+      "max_output": 262144,
+      "modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/thinkingmachines/inkling:free",
+      "created": 1784325956,
+      "available_via": [
+        "OpenRouter"
+      ]
+    },
+    {
+      "id": "google/lyria-3-pro-preview",
+      "name": "Google: Lyria 3 Pro Preview",
+      "provider": "Google",
+      "context_window": 1048576,
+      "max_output": 65536,
+      "modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/google/lyria-3-pro-preview",
+      "created": 1774907286,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "google/lyria-3-clip-preview",
+      "name": "Google: Lyria 3 Clip Preview",
+      "provider": "Google",
+      "context_window": 1048576,
+      "max_output": 65536,
+      "modalities": [
+        "text",
+        "image",
+        "audio"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/google/lyria-3-clip-preview",
+      "created": 1774907255,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "reflection/beam-free",
+      "name": "Reflection: Beam 1.0 (free)",
+      "provider": "Reflection",
+      "context_window": 1048576,
+      "max_output": 131072,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
+      "notes": "",
+      "source": "https://kilo.ai/docs/gateway/models-and-providers",
+      "created": 1756238927,
+      "available_via": [
+        "Kilo Gateway"
+      ]
+    },
+    {
+      "id": "aihubmix/xiaomi-mimo-v2.6-pro-free",
+      "name": "Xiaomi Mimo V2.6 Pro (free)",
+      "provider": "Xiaomi",
+      "context_window": 1048576,
+      "max_output": 131072,
+      "modalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-09-22",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-glm-5.3-free",
+      "name": "Coding GLM 5.3 (free)",
+      "provider": "Zhipu",
+      "context_window": 1048576,
+      "max_output": 131072,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-08-14",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/xiaomi-mimo-v2.6-flash-free",
+      "name": "Xiaomi Mimo V2.6 Flash (free)",
+      "provider": "Xiaomi",
+      "context_window": 1048576,
+      "max_output": 131072,
+      "modalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-09-22",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/nemotron-3.5-lightning-free",
+      "name": "Nemotron 3.5 Lightning (free)",
+      "provider": "Nvidia",
+      "context_window": 1048576,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-08-11",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-kimi-k3-free",
+      "name": "Coding Kimi K3 (free)",
+      "provider": "Moonshot",
+      "context_window": 1048576,
+      "max_output": 1048576,
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-07-16",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/nemotron-3-ultra-550b-a55b-free",
+      "name": "Nemotron 3 Ultra 550B A55B (free)",
+      "provider": "Nvidia",
+      "context_window": 1048576,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-06-04",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "pollinations/gemini-2.0-flash",
+      "name": "Gemini 2.0 Flash",
+      "provider": "Pollinations AI",
+      "context_window": 1048576,
+      "max_output": null,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "rate_limit": "unlimited (no auth)",
+      "notes": "No API key required",
+      "source": "https://pollinations.ai",
+      "created": null
+    },
+    {
+      "id": "nvidia/nemotron-3.5-super-vl:free",
+      "name": "NVIDIA: Nemotron 3.5 Super VL (free)",
+      "provider": "Nvidia",
+      "context_window": 1000000,
+      "max_output": 131072,
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "rate_limit": "40 req/min",
+      "notes": "",
+      "source": "https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free",
+      "created": 1792076662,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning:free",
+      "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+      "provider": "Nvidia",
+      "context_window": 1000000,
+      "max_output": 65536,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "40 req/min",
+      "notes": "",
+      "source": "https://openrouter.ai/nvidia/nemotron-3.5-lightning:free",
+      "created": 1786452751,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "name": "NVIDIA: Nemotron 3 Ultra (free)",
+      "provider": "Nvidia",
+      "context_window": 1000000,
+      "max_output": 65536,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "40 req/min",
+      "notes": "",
+      "source": "https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "created": 1780551208,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "inclusionai/ling-3.1-flash-1019-free",
+      "name": "inclusionAI: Ling 3.1 Flash 1019 (free)",
+      "provider": "Inclusionai",
+      "context_window": 1000000,
+      "max_output": 262144,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
+      "notes": "",
+      "source": "https://kilo.ai/docs/gateway/models-and-providers",
+      "created": 1756238927,
+      "available_via": [
+        "Kilo Gateway"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-glm-5.3-flash-free",
+      "name": "Coding GLM 5.3 Flash (free)",
+      "provider": "Zhipu",
+      "context_window": 1000000,
+      "max_output": 131072,
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-08-26",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-glm-5.2-free",
+      "name": "Coding GLM 5.2 (free)",
+      "provider": "Zhipu",
+      "context_window": 1000000,
+      "max_output": 131072,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-06-16",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-minimax-m3-free",
+      "name": "Coding MiniMax M3 (free)",
+      "provider": "Minimax",
+      "context_window": 1000000,
+      "max_output": 524288,
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-05-31",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/qwen3.6-plus-preview-free",
+      "name": "Qwen3.6 Plus Preview (free)",
+      "provider": "Alibaba",
+      "context_window": 1000000,
+      "max_output": 65535,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "20 req/min",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/dots-3-note-preview-free",
+      "name": "Dots 3 Note Preview (free)",
+      "provider": "Dots studio",
+      "context_window": 524288,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "dots-studio/dots-3-note-preview:free",
+      "name": "Dots Studio: Dots3-Note Preview (free)",
+      "provider": "Dots studio",
+      "context_window": 512000,
+      "max_output": 460800,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/dots-studio/dots-3-note-preview:free",
+      "created": 1786680361,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "recursive/flint-v1.0:free",
+      "name": "Recursive: Flint (free)",
+      "provider": "Recursive",
+      "context_window": 262144,
+      "max_output": 235929,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/recursive/flint-v1.0:free",
+      "created": 1792622765,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "xingchen-agi/xing4.0-29b-a4b:free",
+      "name": "XingChen: Xing4.0 29B A4B (free)",
+      "provider": "Xingchen agi",
+      "context_window": 262144,
+      "max_output": 235929,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/xingchen-agi/xing4.0-29b-a4b:free",
+      "created": 1792177496,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it:free",
+      "name": "Google: Gemma 4 26B A4B  (free)",
+      "provider": "Google",
+      "context_window": 262144,
+      "max_output": 32768,
+      "modalities": [
+        "image",
+        "text",
+        "video"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/google/gemma-4-26b-a4b-it:free",
+      "created": 1775227989,
+      "available_via": [
+        "OpenRouter"
+      ]
+    },
+    {
+      "id": "google/gemma-4-31b-it:free",
+      "name": "Google: Gemma 4 31B (free)",
+      "provider": "Google",
+      "context_window": 262144,
+      "max_output": 32768,
+      "modalities": [
+        "image",
+        "text",
+        "video"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/google/gemma-4-31b-it:free",
+      "created": 1775148486,
+      "available_via": [
+        "OpenRouter"
+      ]
+    },
+    {
+      "id": "aihubmix/intern-s2-free",
+      "name": "Intern S2 (free)",
+      "provider": "AIHubMix",
+      "context_window": 262144,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-05-14",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/agents-a1-free",
+      "name": "Agents A1 (free)",
+      "provider": "AIHubMix",
+      "context_window": 262144,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-06-26",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/nemotron-3-nano-omni-30b-a3b-reasoning-free",
+      "name": "Nemotron 3 Nano Omni 30B A3B (reasoning) (free)",
+      "provider": "Nvidia",
+      "context_window": 262144,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image",
+        "video",
+        "audio"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-04-28",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/gemma-4-31b-it-free",
+      "name": "Gemma 4 31B It (free)",
+      "provider": "Google",
+      "context_window": 262144,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-04-02",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/gemma-4-26b-a4b-it-free",
+      "name": "Gemma 4 26B A4B It (free)",
+      "provider": "Google",
+      "context_window": 262144,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-04-02",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/k2.6-code-preview-free",
+      "name": "K2.6 Code Preview (free)",
+      "provider": "Moonshot",
+      "context_window": 262144,
+      "max_output": 256000,
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "cohere/north-mini-code:free",
+      "name": "Cohere: North Mini Code (free)",
+      "provider": "Cohere",
+      "context_window": 256000,
+      "max_output": 64000,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/cohere/north-mini-code:free",
+      "created": 1781723748,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
+      "provider": "Nvidia",
+      "context_window": 256000,
+      "max_output": 65536,
+      "modalities": [
+        "text",
+        "audio",
+        "image",
+        "video"
+      ],
+      "rate_limit": "40 req/min",
+      "notes": "",
+      "source": "https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "created": 1777393095,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "kilo-auto/free",
+      "name": "Auto Free",
+      "provider": "Kilo auto",
+      "context_window": 256000,
+      "max_output": 32768,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
+      "notes": "",
+      "source": "https://kilo.ai/docs/gateway/models-and-providers",
+      "created": 0,
+      "available_via": [
+        "Kilo Gateway"
+      ]
+    },
+    {
+      "id": "stealth/glyph-cluster",
+      "name": "Stealth: Glyph Cluster (free)",
+      "provider": "Stealth",
+      "context_window": 256000,
+      "max_output": 256000,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "200 req/hour (anonymous, no auth) · higher for signed-in accounts",
+      "notes": "",
+      "source": "https://kilo.ai/docs/gateway/models-and-providers",
+      "created": 1756238927,
+      "available_via": [
+        "Kilo Gateway"
+      ]
+    },
+    {
+      "id": "aihubmix/north-mini-code-free",
+      "name": "North Mini Code (free)",
+      "provider": "Cohere",
+      "context_window": 256000,
+      "max_output": 64000,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-06-09",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/kimi-for-coding-free",
+      "name": "Kimi For Coding (free)",
+      "provider": "Moonshot",
+      "context_window": 256000,
+      "max_output": 32768,
+      "modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-06-12",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/mimo-v2-flash-free",
+      "name": "MiMo V2 Flash (free)",
+      "provider": "AIHubMix",
+      "context_window": 256000,
+      "max_output": 65536,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2025-12-16",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-minimax-m2.7-free",
+      "name": "Coding MiniMax M2.7 (free)",
+      "provider": "Minimax",
+      "context_window": 204800,
+      "max_output": 204800,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-03-18",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-glm-5-turbo-free",
+      "name": "Coding GLM 5 Turbo (free)",
+      "provider": "Zhipu",
+      "context_window": 204800,
+      "max_output": 131072,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-03-16",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-minimax-m2.5-free",
+      "name": "Coding MiniMax M2.5 (free)",
+      "provider": "Minimax",
+      "context_window": 204800,
+      "max_output": 204800,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-02-12",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-minimax-m2.1-free",
+      "name": "Coding MiniMax M2.1 (free)",
+      "provider": "Minimax",
+      "context_window": 204800,
+      "max_output": 204800,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2025-12-23",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-minimax-m2-free",
+      "name": "Coding MiniMax M2 (free)",
+      "provider": "Minimax",
+      "context_window": 204800,
+      "max_output": 204800,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2025-10-27",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "openrouter/free",
+      "name": "Free Models Router",
+      "provider": "Openrouter",
+      "context_window": 200000,
+      "max_output": null,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/openrouter/free",
+      "created": 1769917427,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "aihubmix/coding-glm-5.1-free",
+      "name": "Coding GLM 5.1 (free)",
+      "provider": "Zhipu",
+      "context_window": 200000,
+      "max_output": 131072,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-04-11",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-glm-5-free",
+      "name": "Coding GLM 5 (free)",
+      "provider": "Zhipu",
+      "context_window": 200000,
+      "max_output": 131072,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-02-11",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/glm-4.7-flash-free",
+      "name": "GLM 4.7 Flash (free)",
+      "provider": "Zhipu",
+      "context_window": 200000,
+      "max_output": 131072,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-01-19",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-glm-4.7-free",
+      "name": "Coding GLM 4.7 (free)",
+      "provider": "Zhipu",
+      "context_window": 200000,
+      "max_output": 131072,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2025-12-22",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-glm-4.6-free",
+      "name": "Coding GLM 4.6 (free)",
+      "provider": "Zhipu",
+      "context_window": 200000,
+      "max_output": 131072,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2025-09-30",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/lfm-2.5-2.6b-free",
+      "name": "Lfm 2.5 2.6b (free)",
+      "provider": "Liquid",
+      "context_window": 131072,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-08-12",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/nemotron-3.5-content-safety-free",
+      "name": "Nemotron 3.5 Content Safety (free)",
+      "provider": "Nvidia",
+      "context_window": 131072,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-06-04",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3.5-content-safety:free",
+      "name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
+      "provider": "Nvidia",
+      "context_window": 128000,
+      "max_output": 8192,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "rate_limit": "40 req/min",
+      "notes": "",
+      "source": "https://openrouter.ai/nvidia/nemotron-3.5-content-safety:free",
+      "created": 1780581864,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "pollinations/mistral-nemo",
+      "name": "Mistral Nemo",
+      "provider": "Pollinations AI",
+      "context_window": 128000,
+      "max_output": null,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "unlimited (no auth)",
+      "notes": "No API key required",
+      "source": "https://pollinations.ai",
+      "created": null
+    },
+    {
+      "id": "pollinations/mistral-small",
+      "name": "Mistral Small 3.2",
+      "provider": "Pollinations AI",
+      "context_window": 128000,
+      "max_output": null,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "unlimited (no auth)",
+      "notes": "No API key required",
+      "source": "https://pollinations.ai",
+      "created": null
+    },
+    {
+      "id": "pollinations/openai-large",
+      "name": "GPT-4o",
+      "provider": "Pollinations AI",
+      "context_window": 128000,
+      "max_output": null,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "rate_limit": "unlimited (no auth)",
+      "notes": "No API key required",
+      "source": "https://pollinations.ai",
+      "created": null
+    },
+    {
+      "id": "liquid/lfm-2.5-2.6b:free",
+      "name": "LiquidAI: LFM2.5-2.6B (free)",
+      "provider": "Liquid",
+      "context_window": 65536,
+      "max_output": 8192,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "10 req/min",
+      "notes": "",
+      "source": "https://openrouter.ai/liquid/lfm-2.5-2.6b:free",
+      "created": 1786470519,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "aihubmix/decision-model-preview",
+      "name": "Decision Model Preview",
+      "provider": "AIHubMix",
+      "context_window": 64000,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-09-24",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/jina-ocr-v1",
+      "name": "Jina Ocr V1",
+      "provider": "AIHubMix",
+      "context_window": 32000,
+      "max_output": 0,
+      "modalities": [
+        "image",
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-09-14",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/elephant-1-free",
+      "name": "Elephant 1 (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/span-01-lite-free",
+      "name": "Span 01 Lite (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/mammoth-1-free",
+      "name": "Mammoth 1 (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/nemotron-3.5-super-vl-free",
+      "name": "Nemotron 3.5 Super VL (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/gpt-live-transcribe",
+      "name": "GPT Live Transcribe",
+      "provider": "Openai",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "audio",
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-07-28",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/xing4.0-29b-a4b-free",
+      "name": "Xing4.0 29B A4B (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/flint-v1.0-free",
+      "name": "Flint V1.0 (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    }
+  ]
+}
