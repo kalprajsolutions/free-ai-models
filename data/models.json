@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T11:02:55.489Z",
+  "updated_at": "2026-11-02T12:00:27.039Z",
   "total_free_models": 66,
   "sources": [
     "OpenRouter",
@@ -629,6 +629,23 @@
       ]
     },
     {
+      "id": "aihubmix/xing4.0-29b-a4b-free",
+      "name": "Xing4.0 29B A4B (free)",
+      "provider": "Xingchen",
+      "context_window": 262144,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
       "id": "aihubmix/k2.6-code-preview-free",
       "name": "K2.6 Code Preview (free)",
       "provider": "Moonshot",
@@ -1225,23 +1242,6 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": "2026-07-28",
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/xing4.0-29b-a4b-free",
-      "name": "Xing4.0 29B A4B (free)",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
       "available_via": [
         "AIHubMix"
       ]

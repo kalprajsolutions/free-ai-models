@@ -57,7 +57,7 @@ Each model entry includes:
 ## Free models (auto-updated daily)
 
 <!-- TABLE_START -->
-> Last updated: **Sun, 01 Nov 2026 11:02:55 UTC** · 66 models tracked
+> Last updated: **Mon, 02 Nov 2026 12:00:27 UTC** · 66 models tracked
 
 | # | Model | Provider | Context | Modalities | Rate Limit | Source |
 |---|-------|----------|---------|------------|------------|--------|
@@ -92,40 +92,40 @@ Each model entry includes:
 | 29 | **Nemotron 3 Nano Omni 30B A3B (reasoning) (free)** | Nvidia | 262K | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
 | 30 | **Gemma 4 31B It (free)** | Google | 262K | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
 | 31 | **Gemma 4 26B A4B It (free)** | Google | 262K | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
-| 32 | **K2.6 Code Preview (free)** | Moonshot | 262K | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
-| 33 | **Cohere: North Mini Code (free)** | Cohere | 256K | 💬 text | varies | [link](https://openrouter.ai/cohere/north-mini-code:free) |
-| 34 | **NVIDIA: Nemotron 3 Nano Omni (free)** | Nvidia | 256K | 💬 text, audio, 🖼️ vision, video | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free) |
-| 35 | **Auto Free** | Kilo auto | 256K | 💬 text | 200 req/hour (anonymous, no auth) · higher for signed-in accounts | [link](https://kilo.ai/docs/gateway/models-and-providers) |
-| 36 | **Stealth: Glyph Cluster (free)** | Stealth | 256K | 💬 text | 200 req/hour (anonymous, no auth) · higher for signed-in accounts | [link](https://kilo.ai/docs/gateway/models-and-providers) |
-| 37 | **North Mini Code (free)** | Cohere | 256K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 38 | **Kimi For Coding (free)** | Moonshot | 256K | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
-| 39 | **MiMo V2 Flash (free)** | AIHubMix | 256K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 40 | **Coding MiniMax M2.7 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 41 | **Coding GLM 5 Turbo (free)** | Zhipu | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 42 | **Coding MiniMax M2.5 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 43 | **Coding MiniMax M2.1 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 44 | **Coding MiniMax M2 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 45 | **Free Models Router** | Openrouter | 200K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/openrouter/free) |
-| 46 | **Coding GLM 5.1 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 47 | **Coding GLM 5 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 48 | **GLM 4.7 Flash (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 49 | **Coding GLM 4.7 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 50 | **Coding GLM 4.6 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 51 | **Lfm 2.5 2.6b (free)** | Liquid | 131K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 52 | **Nemotron 3.5 Content Safety (free)** | Nvidia | 131K | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 53 | **NVIDIA: Nemotron 3.5 Content Safety (free)** | Nvidia | 128K | 💬 text, 🖼️ vision | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-content-safety:free) |
-| 54 | **Mistral Nemo** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
-| 55 | **Mistral Small 3.2** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
-| 56 | **GPT-4o** | Pollinations AI | 128K | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
-| 57 | **LiquidAI: LFM2.5-2.6B (free)** | Liquid | 66K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-2.5-2.6b:free) |
-| 58 | **Decision Model Preview** | AIHubMix | 64K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 59 | **Jina Ocr V1** | AIHubMix | 32K | 🖼️ vision, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 60 | **Elephant 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 61 | **Span 01 Lite (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 62 | **Mammoth 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 63 | **Nemotron 3.5 Super VL (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 64 | **GPT Live Transcribe** | Openai | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 65 | **Xing4.0 29B A4B (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 32 | **Xing4.0 29B A4B (free)** | Xingchen | 262K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 33 | **K2.6 Code Preview (free)** | Moonshot | 262K | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 34 | **Cohere: North Mini Code (free)** | Cohere | 256K | 💬 text | varies | [link](https://openrouter.ai/cohere/north-mini-code:free) |
+| 35 | **NVIDIA: Nemotron 3 Nano Omni (free)** | Nvidia | 256K | 💬 text, audio, 🖼️ vision, video | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free) |
+| 36 | **Auto Free** | Kilo auto | 256K | 💬 text | 200 req/hour (anonymous, no auth) · higher for signed-in accounts | [link](https://kilo.ai/docs/gateway/models-and-providers) |
+| 37 | **Stealth: Glyph Cluster (free)** | Stealth | 256K | 💬 text | 200 req/hour (anonymous, no auth) · higher for signed-in accounts | [link](https://kilo.ai/docs/gateway/models-and-providers) |
+| 38 | **North Mini Code (free)** | Cohere | 256K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 39 | **Kimi For Coding (free)** | Moonshot | 256K | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 40 | **MiMo V2 Flash (free)** | AIHubMix | 256K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 41 | **Coding MiniMax M2.7 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 42 | **Coding GLM 5 Turbo (free)** | Zhipu | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 43 | **Coding MiniMax M2.5 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 44 | **Coding MiniMax M2.1 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 45 | **Coding MiniMax M2 (free)** | Minimax | 205K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 46 | **Free Models Router** | Openrouter | 200K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/openrouter/free) |
+| 47 | **Coding GLM 5.1 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 48 | **Coding GLM 5 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 49 | **GLM 4.7 Flash (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 50 | **Coding GLM 4.7 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 51 | **Coding GLM 4.6 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 52 | **Lfm 2.5 2.6b (free)** | Liquid | 131K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 53 | **Nemotron 3.5 Content Safety (free)** | Nvidia | 131K | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 54 | **NVIDIA: Nemotron 3.5 Content Safety (free)** | Nvidia | 128K | 💬 text, 🖼️ vision | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-content-safety:free) |
+| 55 | **Mistral Nemo** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
+| 56 | **Mistral Small 3.2** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
+| 57 | **GPT-4o** | Pollinations AI | 128K | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
+| 58 | **LiquidAI: LFM2.5-2.6B (free)** | Liquid | 66K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-2.5-2.6b:free) |
+| 59 | **Decision Model Preview** | AIHubMix | 64K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 60 | **Jina Ocr V1** | AIHubMix | 32K | 🖼️ vision, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 61 | **Elephant 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 62 | **Span 01 Lite (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 63 | **Mammoth 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 64 | **Nemotron 3.5 Super VL (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 65 | **GPT Live Transcribe** | Openai | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
 | 66 | **Flint V1.0 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
 <!-- TABLE_END -->
 
