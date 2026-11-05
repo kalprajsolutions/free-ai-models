@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-04T11:52:59.790Z",
-  "total_free_models": 67,
+  "updated_at": "2026-11-05T11:53:48.516Z",
+  "total_free_models": 65,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -34,44 +34,6 @@
           "gateway": "Kilo Gateway",
           "url": "https://kilo.ai/docs/gateway/models-and-providers"
         }
-      ]
-    },
-    {
-      "id": "thinkingmachines/inkling-small:free",
-      "name": "Thinking Machines: Inkling Small (free)",
-      "provider": "Thinkingmachines",
-      "context_window": 1048576,
-      "max_output": 262144,
-      "modalities": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://openrouter.ai/thinkingmachines/inkling-small:free",
-      "created": 1785443117,
-      "available_via": [
-        "OpenRouter"
-      ]
-    },
-    {
-      "id": "thinkingmachines/inkling:free",
-      "name": "Thinking Machines: Inkling (free)",
-      "provider": "Thinkingmachines",
-      "context_window": 1048576,
-      "max_output": 262144,
-      "modalities": [
-        "text",
-        "image",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://openrouter.ai/thinkingmachines/inkling:free",
-      "created": 1784325956,
-      "available_via": [
-        "OpenRouter"
       ]
     },
     {
