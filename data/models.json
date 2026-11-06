@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T11:53:48.516Z",
+  "updated_at": "2026-11-06T11:50:11.399Z",
   "total_free_models": 65,
   "sources": [
     "OpenRouter",
@@ -992,24 +992,6 @@
       ]
     },
     {
-      "id": "nvidia/nemotron-3.5-content-safety:free",
-      "name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
-      "provider": "Nvidia",
-      "context_window": 128000,
-      "max_output": 8192,
-      "modalities": [
-        "text",
-        "image"
-      ],
-      "rate_limit": "40 req/min",
-      "notes": "",
-      "source": "https://openrouter.ai/nvidia/nemotron-3.5-content-safety:free",
-      "created": 1780581864,
-      "available_via": [
-        "OpenRouter"
-      ]
-    },
-    {
       "id": "pollinations/mistral-nemo",
       "name": "Mistral Nemo",
       "provider": "Pollinations AI",
@@ -1216,6 +1198,24 @@
       "context_window": 0,
       "max_output": 0,
       "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/gemini-2.5-flash-live",
+      "name": "Gemini 2.5 Flash Live",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "audio",
         "text"
       ],
       "rate_limit": "varies",

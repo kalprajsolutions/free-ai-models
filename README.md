@@ -57,7 +57,7 @@ Each model entry includes:
 ## Free models (auto-updated daily)
 
 <!-- TABLE_START -->
-> Last updated: **Thu, 05 Nov 2026 11:53:48 UTC** · 65 models tracked
+> Last updated: **Fri, 06 Nov 2026 11:50:11 UTC** · 65 models tracked
 
 | # | Model | Provider | Context | Modalities | Rate Limit | Source |
 |---|-------|----------|---------|------------|------------|--------|
@@ -112,20 +112,20 @@ Each model entry includes:
 | 49 | **Coding GLM 4.6 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 50 | **Lfm 2.5 2.6b (free)** | Liquid | 131K | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 51 | **Nemotron 3.5 Content Safety (free)** | Nvidia | 131K | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 52 | **NVIDIA: Nemotron 3.5 Content Safety (free)** | Nvidia | 128K | 💬 text, 🖼️ vision | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-content-safety:free) |
-| 53 | **Mistral Nemo** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
-| 54 | **Mistral Small 3.2** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
-| 55 | **GPT-4o** | Pollinations AI | 128K | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
-| 56 | **LiquidAI: LFM2.5-2.6B (free)** | Liquid | 66K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-2.5-2.6b:free) |
-| 57 | **Decision Model Preview** | AIHubMix | 64K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 58 | **Jina Ocr V1** | AIHubMix | 32K | 🖼️ vision, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 59 | **Crouton Alpha (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 60 | **Elephant 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 61 | **Mammoth 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 62 | **Nemotron 3.5 Super VL (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 63 | **Span 01 Lite (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 64 | **GPT Live Transcribe** | Openai | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 65 | **Flint V1.0 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 52 | **Mistral Nemo** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
+| 53 | **Mistral Small 3.2** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
+| 54 | **GPT-4o** | Pollinations AI | 128K | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
+| 55 | **LiquidAI: LFM2.5-2.6B (free)** | Liquid | 66K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-2.5-2.6b:free) |
+| 56 | **Decision Model Preview** | AIHubMix | 64K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 57 | **Jina Ocr V1** | AIHubMix | 32K | 🖼️ vision, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 58 | **Crouton Alpha (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 59 | **Elephant 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 60 | **Mammoth 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 61 | **Nemotron 3.5 Super VL (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 62 | **Span 01 Lite (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 63 | **GPT Live Transcribe** | Openai | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 64 | **Flint V1.0 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 65 | **Gemini 2.5 Flash Live** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
 <!-- TABLE_END -->
 
 ---
