@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-06T11:50:11.399Z",
-  "total_free_models": 65,
+  "updated_at": "2026-11-07T10:53:16.882Z",
+  "total_free_models": 67,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -103,6 +103,27 @@
       "created": 1756238927,
       "available_via": [
         "Kilo Gateway"
+      ]
+    },
+    {
+      "id": "aihubmix/crouton-alpha-free",
+      "name": "Crouton Alpha (free)",
+      "provider": "Unknown",
+      "context_window": 1048576,
+      "max_output": 943718,
+      "modalities": [
+        "text",
+        "image",
+        "video",
+        "document",
+        "audio"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
       ]
     },
     {
@@ -410,6 +431,30 @@
       "notes": "",
       "source": "https://openrouter.ai/dots-studio/dots-3-note-preview:free",
       "created": 1786680361,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
+      "id": "liquid/lfm-3-1.7b:free",
+      "name": "LiquidAI: LFM3-1.7B (free)",
+      "provider": "Liquid",
+      "context_window": 262144,
+      "max_output": 8192,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "10 req/min",
+      "notes": "",
+      "source": "https://openrouter.ai/liquid/lfm-3-1.7b:free",
+      "created": 1794009477,
       "available_via": [
         "OpenRouter",
         "Kilo Gateway"
@@ -1087,36 +1132,21 @@
       ]
     },
     {
-      "id": "aihubmix/crouton-alpha-free",
-      "name": "Crouton Alpha (free)",
+      "id": "aihubmix/gemini-omni-1.2-flash",
+      "name": "Gemini Omni 1.2 Flash",
       "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,
       "modalities": [
         "text",
-        "image"
+        "image",
+        "audio",
+        "video"
       ],
       "rate_limit": "varies",
       "notes": "",
       "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/elephant-1-free",
-      "name": "Elephant 1 (free)",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
+      "created": "2026-11-07",
       "available_via": [
         "AIHubMix"
       ]
@@ -1147,6 +1177,23 @@
       "modalities": [
         "text",
         "image"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/elephant-1-free",
+      "name": "Elephant 1 (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
       ],
       "rate_limit": "varies",
       "notes": "",
