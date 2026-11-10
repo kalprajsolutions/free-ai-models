@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T12:33:19.737Z",
+  "updated_at": "2026-11-10T12:08:46.923Z",
   "total_free_models": 77,
   "sources": [
     "OpenRouter",
@@ -9,22 +9,19 @@
   ],
   "models": [
     {
-      "id": "stealth/crouton-alpha",
-      "name": "Crouton Alpha",
-      "provider": "Stealth",
+      "id": "thinkingmachines/inkling-2-small:free",
+      "name": "Thinking Machines: Inkling 2 Small (free)",
+      "provider": "Thinkingmachines",
       "context_window": 1048576,
-      "max_output": 943718,
+      "max_output": 131072,
       "modalities": [
         "text",
-        "image",
-        "video",
-        "file",
-        "audio"
+        "image"
       ],
       "rate_limit": "varies",
       "notes": "",
-      "source": "https://openrouter.ai/stealth/crouton-alpha",
-      "created": 1793669930,
+      "source": "https://openrouter.ai/thinkingmachines/inkling-2-small:free",
+      "created": 1794261847,
       "available_via": [
         "OpenRouter",
         "Kilo Gateway"
@@ -1256,7 +1253,7 @@
     },
     {
       "id": "aihubmix/eleven_audio_isolation",
-      "name": "Voice Isolator",
+      "name": "Eleven Voice Isolator",
       "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,
@@ -1361,7 +1358,7 @@
     },
     {
       "id": "aihubmix/eleven_text_to_sound_v3",
-      "name": "SFX v3",
+      "name": "Eleven SFX v3",
       "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,
