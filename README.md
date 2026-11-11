@@ -57,7 +57,7 @@ Each model entry includes:
 ## Free models (auto-updated daily)
 
 <!-- TABLE_START -->
-> Last updated: **Tue, 10 Nov 2026 12:08:46 UTC** · 77 models tracked
+> Last updated: **Wed, 11 Nov 2026 11:41:48 UTC** · 80 models tracked
 
 | # | Model | Provider | Context | Modalities | Rate Limit | Source |
 |---|-------|----------|---------|------------|------------|--------|
@@ -72,18 +72,18 @@ Each model entry includes:
 | 9 | **Coding Kimi K3 (free)** | Moonshot | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
 | 10 | **Nemotron 3 Ultra 550B A55B (free)** | Nvidia | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 11 | **Gemini 2.0 Flash** | Pollinations AI | 1M | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
-| 12 | **NVIDIA: Nemotron 3.5 Super VL (free)** | Nvidia | 1M | 💬 text, 🖼️ vision, video | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free) |
-| 13 | **NVIDIA: Nemotron 3.5 Lightning (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-lightning:free) |
-| 14 | **NVIDIA: Nemotron 3 Ultra (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free) |
-| 15 | **Coding GLM 5.3 Flash (free)** | Zhipu | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
-| 16 | **Coding GLM 5.2 (free)** | Zhipu | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 17 | **Coding MiniMax M3 (free)** | Minimax | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
-| 18 | **Qwen3.6 Plus Preview (free)** | Alibaba | 1M | 💬 text | 20 req/min | [link](https://aihubmix.com/models) |
-| 19 | **Dots 3 Note Preview (free)** | Dots studio | 524K | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
-| 20 | **Dots Studio: Dots3-Note Preview (free)** | Dots studio | 512K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/dots-studio/dots-3-note-preview:free) |
-| 21 | **LiquidAI: LFM3-1.7B (free)** | Liquid | 262K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-3-1.7b:free) |
-| 22 | **Recursive: Flint (free)** | Recursive | 262K | 💬 text | varies | [link](https://openrouter.ai/recursive/flint-v1.0:free) |
-| 23 | **XingChen: Xing4.0 29B A4B (free)** | Xingchen agi | 262K | 💬 text | varies | [link](https://openrouter.ai/xingchen-agi/xing4.0-29b-a4b:free) |
+| 12 | **Baidu: ERNIE-5.5-Flash-Preview (free)** | Baidu | 1M | 💬 text | varies | [link](https://openrouter.ai/baidu/ernie-5.5-flash-preview:free) |
+| 13 | **NVIDIA: Nemotron 3.5 Super VL (free)** | Nvidia | 1M | 💬 text, 🖼️ vision, video | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-super-vl:free) |
+| 14 | **NVIDIA: Nemotron 3.5 Lightning (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3.5-lightning:free) |
+| 15 | **NVIDIA: Nemotron 3 Ultra (free)** | Nvidia | 1M | 💬 text | 40 req/min | [link](https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free) |
+| 16 | **Coding GLM 5.3 Flash (free)** | Zhipu | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 17 | **Coding GLM 5.2 (free)** | Zhipu | 1M | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 18 | **Coding MiniMax M3 (free)** | Minimax | 1M | 💬 text, 🖼️ vision, video | varies | [link](https://aihubmix.com/models) |
+| 19 | **Qwen3.6 Plus Preview (free)** | Alibaba | 1M | 💬 text | 20 req/min | [link](https://aihubmix.com/models) |
+| 20 | **Dots 3 Note Preview (free)** | Dots studio | 524K | 💬 text, 🖼️ vision, video, audio | varies | [link](https://aihubmix.com/models) |
+| 21 | **Dots Studio: Dots3-Note Preview (free)** | Dots studio | 512K | 💬 text, 🖼️ vision | varies | [link](https://openrouter.ai/dots-studio/dots-3-note-preview:free) |
+| 22 | **LiquidAI: LFM3-1.7B (free)** | Liquid | 262K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-3-1.7b:free) |
+| 23 | **Recursive: Flint (free)** | Recursive | 262K | 💬 text | varies | [link](https://openrouter.ai/recursive/flint-v1.0:free) |
 | 24 | **Google: Gemma 4 26B A4B  (free)** | Google | 262K | 🖼️ vision, 💬 text, video | varies | [link](https://openrouter.ai/google/gemma-4-26b-a4b-it:free) |
 | 25 | **Google: Gemma 4 31B (free)** | Google | 262K | 🖼️ vision, 💬 text, video | varies | [link](https://openrouter.ai/google/gemma-4-31b-it:free) |
 | 26 | **Intern S2 (free)** | AIHubMix | 262K | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
@@ -119,14 +119,14 @@ Each model entry includes:
 | 56 | **LiquidAI: LFM2.5-2.6B (free)** | Liquid | 66K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-2.5-2.6b:free) |
 | 57 | **Decision Model Preview** | AIHubMix | 64K | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 58 | **Jina Ocr V1** | AIHubMix | 32K | 🖼️ vision, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 59 | **Mammoth 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 60 | **Nemotron 3.5 Super VL (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 61 | **Elephant 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 59 | **Elephant 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 60 | **Mammoth 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 61 | **Nemotron 3.5 Super VL (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
 | 62 | **Span 01 Lite (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 63 | **GPT Live Transcribe** | Openai | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
 | 64 | **Flint V1.0 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 65 | **Scribe v2** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 66 | **Eleven Music v2** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
+| 65 | **Dubbing v1** | AIHubMix | — | audio, video | varies | [link](https://aihubmix.com/models) |
+| 66 | **Dubbing v2** | AIHubMix | — | audio, video | varies | [link](https://aihubmix.com/models) |
 | 67 | **Eleven Voice Isolator** | AIHubMix | — | audio | varies | [link](https://aihubmix.com/models) |
 | 68 | **Eleven English v2 (Speech to Speech)** | AIHubMix | — | audio | varies | [link](https://aihubmix.com/models) |
 | 69 | **Eleven Flash v2** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
@@ -138,6 +138,9 @@ Each model entry includes:
 | 75 | **Eleven v4** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
 | 76 | **Eleven v4 Turbo** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
 | 77 | **Gemini 2.5 Flash Live** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 78 | **Eleven Music v2** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
+| 79 | **Scribe v2** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 80 | **Scribe v2 Realtime** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
 <!-- TABLE_END -->
 
 ---

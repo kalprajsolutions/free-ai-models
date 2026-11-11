@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-10T12:08:46.923Z",
-  "total_free_models": 77,
+  "updated_at": "2026-11-11T11:41:48.237Z",
+  "total_free_models": 80,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -232,6 +232,30 @@
       "created": null
     },
     {
+      "id": "baidu/ernie-5.5-flash-preview:free",
+      "name": "Baidu: ERNIE-5.5-Flash-Preview (free)",
+      "provider": "Baidu",
+      "context_window": 1024000,
+      "max_output": 921600,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/baidu/ernie-5.5-flash-preview:free",
+      "created": 1794333533,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
+      ]
+    },
+    {
       "id": "nvidia/nemotron-3.5-super-vl:free",
       "name": "NVIDIA: Nemotron 3.5 Super VL (free)",
       "provider": "Nvidia",
@@ -459,23 +483,6 @@
       "notes": "",
       "source": "https://openrouter.ai/recursive/flint-v1.0:free",
       "created": 1792622765,
-      "available_via": [
-        "OpenRouter"
-      ]
-    },
-    {
-      "id": "xingchen-agi/xing4.0-29b-a4b:free",
-      "name": "XingChen: Xing4.0 29B A4B (free)",
-      "provider": "Xingchen agi",
-      "context_window": 262144,
-      "max_output": 235929,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://openrouter.ai/xingchen-agi/xing4.0-29b-a4b:free",
-      "created": 1792177496,
       "available_via": [
         "OpenRouter"
       ]
@@ -1112,6 +1119,23 @@
       ]
     },
     {
+      "id": "aihubmix/elephant-1-free",
+      "name": "Elephant 1 (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
       "id": "aihubmix/mammoth-1-free",
       "name": "Mammoth 1 (free)",
       "provider": "AIHubMix",
@@ -1137,23 +1161,6 @@
       "modalities": [
         "text",
         "image"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/elephant-1-free",
-      "name": "Elephant 1 (free)",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text"
       ],
       "rate_limit": "varies",
       "notes": "",
@@ -1216,14 +1223,14 @@
       ]
     },
     {
-      "id": "aihubmix/scribe_v2",
-      "name": "Scribe v2",
+      "id": "aihubmix/dubbing_v1",
+      "name": "Dubbing v1",
       "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,
       "modalities": [
         "audio",
-        "text"
+        "video"
       ],
       "rate_limit": "varies",
       "notes": "",
@@ -1234,14 +1241,14 @@
       ]
     },
     {
-      "id": "aihubmix/music_v2",
-      "name": "Eleven Music v2",
+      "id": "aihubmix/dubbing_v2",
+      "name": "Dubbing v2",
       "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,
       "modalities": [
-        "text",
-        "audio"
+        "audio",
+        "video"
       ],
       "rate_limit": "varies",
       "notes": "",
@@ -1431,6 +1438,60 @@
     {
       "id": "aihubmix/gemini-2.5-flash-live",
       "name": "Gemini 2.5 Flash Live",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "audio",
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/music_v2",
+      "name": "Eleven Music v2",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "audio"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/scribe_v2",
+      "name": "Scribe v2",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "audio",
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/scribe_v2_realtime",
+      "name": "Scribe v2 Realtime",
       "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,
