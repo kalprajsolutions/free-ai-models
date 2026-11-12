@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-11T11:41:48.237Z",
-  "total_free_models": 80,
+  "updated_at": "2026-11-12T12:13:27.327Z",
+  "total_free_models": 82,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -23,14 +23,7 @@
       "source": "https://openrouter.ai/thinkingmachines/inkling-2-small:free",
       "created": 1794261847,
       "available_via": [
-        "OpenRouter",
-        "Kilo Gateway"
-      ],
-      "alt_sources": [
-        {
-          "gateway": "Kilo Gateway",
-          "url": "https://kilo.ai/docs/gateway/models-and-providers"
-        }
+        "OpenRouter"
       ]
     },
     {
@@ -1119,6 +1112,24 @@
       ]
     },
     {
+      "id": "aihubmix/doubao-seedream-5-5",
+      "name": "Doubao Seedream 5.5",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "image",
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-11-11",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
       "id": "aihubmix/elephant-1-free",
       "name": "Elephant 1 (free)",
       "provider": "AIHubMix",
@@ -1206,6 +1217,23 @@
       ]
     },
     {
+      "id": "aihubmix/ernie-5.5-flash-preview-free",
+      "name": "ERNIE 5.5 Flash Preview (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-11-10",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
       "id": "aihubmix/flint-v1.0-free",
       "name": "Flint V1.0 (free)",
       "provider": "AIHubMix",
@@ -1213,6 +1241,60 @@
       "max_output": 0,
       "modalities": [
         "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/scribe_v2",
+      "name": "Scribe v2",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "audio",
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/scribe_v2_realtime",
+      "name": "Scribe v2 Realtime",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "audio",
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/music_v2",
+      "name": "Eleven Music v2",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "audio"
       ],
       "rate_limit": "varies",
       "notes": "",
@@ -1438,60 +1520,6 @@
     {
       "id": "aihubmix/gemini-2.5-flash-live",
       "name": "Gemini 2.5 Flash Live",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "audio",
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/music_v2",
-      "name": "Eleven Music v2",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/scribe_v2",
-      "name": "Scribe v2",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "audio",
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/scribe_v2_realtime",
-      "name": "Scribe v2 Realtime",
       "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,

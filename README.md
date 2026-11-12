@@ -57,7 +57,7 @@ Each model entry includes:
 ## Free models (auto-updated daily)
 
 <!-- TABLE_START -->
-> Last updated: **Wed, 11 Nov 2026 11:41:48 UTC** · 80 models tracked
+> Last updated: **Thu, 12 Nov 2026 12:13:27 UTC** · 82 models tracked
 
 | # | Model | Provider | Context | Modalities | Rate Limit | Source |
 |---|-------|----------|---------|------------|------------|--------|
@@ -119,28 +119,30 @@ Each model entry includes:
 | 56 | **LiquidAI: LFM2.5-2.6B (free)** | Liquid | 66K | 💬 text | 10 req/min | [link](https://openrouter.ai/liquid/lfm-2.5-2.6b:free) |
 | 57 | **Decision Model Preview** | AIHubMix | 64K | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 58 | **Jina Ocr V1** | AIHubMix | 32K | 🖼️ vision, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 59 | **Elephant 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 60 | **Mammoth 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 61 | **Nemotron 3.5 Super VL (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 62 | **Span 01 Lite (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 63 | **GPT Live Transcribe** | Openai | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 64 | **Flint V1.0 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 65 | **Dubbing v1** | AIHubMix | — | audio, video | varies | [link](https://aihubmix.com/models) |
-| 66 | **Dubbing v2** | AIHubMix | — | audio, video | varies | [link](https://aihubmix.com/models) |
-| 67 | **Eleven Voice Isolator** | AIHubMix | — | audio | varies | [link](https://aihubmix.com/models) |
-| 68 | **Eleven English v2 (Speech to Speech)** | AIHubMix | — | audio | varies | [link](https://aihubmix.com/models) |
-| 69 | **Eleven Flash v2** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 70 | **Eleven Flash v2.5** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 71 | **Eleven Multilingual v2 (Speech to Speech)** | AIHubMix | — | audio | varies | [link](https://aihubmix.com/models) |
-| 72 | **Eleven Multilingual v2** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 73 | **Eleven SFX v3** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 74 | **Eleven v3** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 75 | **Eleven v4** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 76 | **Eleven v4 Turbo** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 77 | **Gemini 2.5 Flash Live** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 78 | **Eleven Music v2** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 79 | **Scribe v2** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 80 | **Scribe v2 Realtime** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 59 | **Doubao Seedream 5.5** | AIHubMix | — | 🖼️ vision, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 60 | **Elephant 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 61 | **Mammoth 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 62 | **Nemotron 3.5 Super VL (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 63 | **Span 01 Lite (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 64 | **GPT Live Transcribe** | Openai | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 65 | **ERNIE 5.5 Flash Preview (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 66 | **Flint V1.0 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 67 | **Scribe v2** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 68 | **Scribe v2 Realtime** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 69 | **Eleven Music v2** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
+| 70 | **Dubbing v1** | AIHubMix | — | audio, video | varies | [link](https://aihubmix.com/models) |
+| 71 | **Dubbing v2** | AIHubMix | — | audio, video | varies | [link](https://aihubmix.com/models) |
+| 72 | **Eleven Voice Isolator** | AIHubMix | — | audio | varies | [link](https://aihubmix.com/models) |
+| 73 | **Eleven English v2 (Speech to Speech)** | AIHubMix | — | audio | varies | [link](https://aihubmix.com/models) |
+| 74 | **Eleven Flash v2** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
+| 75 | **Eleven Flash v2.5** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
+| 76 | **Eleven Multilingual v2 (Speech to Speech)** | AIHubMix | — | audio | varies | [link](https://aihubmix.com/models) |
+| 77 | **Eleven Multilingual v2** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
+| 78 | **Eleven SFX v3** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
+| 79 | **Eleven v3** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
+| 80 | **Eleven v4** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
+| 81 | **Eleven v4 Turbo** | AIHubMix | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
+| 82 | **Gemini 2.5 Flash Live** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
 <!-- TABLE_END -->
 
 ---
