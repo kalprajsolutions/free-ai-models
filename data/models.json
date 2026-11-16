@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T11:46:04.793Z",
+  "updated_at": "2026-11-16T12:27:25.646Z",
   "total_free_models": 84,
   "sources": [
     "OpenRouter",
@@ -1194,8 +1194,8 @@
       ]
     },
     {
-      "id": "aihubmix/mammoth-1-free",
-      "name": "Mammoth 1 (free)",
+      "id": "aihubmix/elephant-1-free",
+      "name": "Elephant 1 (free)",
       "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,
@@ -1211,8 +1211,8 @@
       ]
     },
     {
-      "id": "aihubmix/elephant-1-free",
-      "name": "Elephant 1 (free)",
+      "id": "aihubmix/mammoth-1-free",
+      "name": "Mammoth 1 (free)",
       "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,
@@ -1315,6 +1315,24 @@
       ]
     },
     {
+      "id": "aihubmix/music_v2",
+      "name": "Eleven Music v2",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "audio"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
       "id": "aihubmix/scribe_v2",
       "name": "Scribe v2",
       "provider": "AIHubMix",
@@ -1351,27 +1369,9 @@
       ]
     },
     {
-      "id": "aihubmix/music_v2",
-      "name": "Eleven Music v2",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
       "id": "aihubmix/dubbing_v1",
       "name": "Dubbing v1",
-      "provider": "AIHubMix",
+      "provider": "Elevenlabs",
       "context_window": 0,
       "max_output": 0,
       "modalities": [
@@ -1389,7 +1389,7 @@
     {
       "id": "aihubmix/dubbing_v2",
       "name": "Dubbing v2",
-      "provider": "AIHubMix",
+      "provider": "Elevenlabs",
       "context_window": 0,
       "max_output": 0,
       "modalities": [
@@ -1424,7 +1424,7 @@
     {
       "id": "aihubmix/eleven_english_sts_v2",
       "name": "Eleven English v2 (Speech to Speech)",
-      "provider": "AIHubMix",
+      "provider": "Elevenlabs",
       "context_window": 0,
       "max_output": 0,
       "modalities": [
@@ -1459,7 +1459,7 @@
     {
       "id": "aihubmix/eleven_flash_v2_5",
       "name": "Eleven Flash v2.5",
-      "provider": "AIHubMix",
+      "provider": "Elevenlabs",
       "context_window": 0,
       "max_output": 0,
       "modalities": [
