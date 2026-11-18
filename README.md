@@ -57,7 +57,7 @@ Each model entry includes:
 ## Free models (auto-updated daily)
 
 <!-- TABLE_START -->
-> Last updated: **Tue, 17 Nov 2026 12:48:00 UTC** · 85 models tracked
+> Last updated: **Wed, 18 Nov 2026 12:41:02 UTC** · 70 models tracked
 
 | # | Model | Provider | Context | Modalities | Rate Limit | Source |
 |---|-------|----------|---------|------------|------------|--------|
@@ -115,37 +115,22 @@ Each model entry includes:
 | 52 | **Coding GLM 4.7 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 53 | **Coding GLM 4.6 (free)** | Zhipu | 200K | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 54 | **Lfm 2.5 2.6b (free)** | Liquid | 131K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 55 | **Mistral Nemo** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
-| 56 | **Mistral Small 3.2** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
-| 57 | **GPT-4o** | Pollinations AI | 128K | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
-| 58 | **Decision Model Preview** | AIHubMix | 64K | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 59 | **Jina Ocr V1** | AIHubMix | 32K | 🖼️ vision, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 60 | **Doubao Seedream 5.5** | Bytedance | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 61 | **Ling 3.2 Flash (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 62 | **Particle 1 (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 63 | **Lfm 3 1.7b (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 64 | **Elephant 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 65 | **Mammoth 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 66 | **Nemotron 3.5 Super VL (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
-| 67 | **Span 01 Lite (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 68 | **GPT Live Transcribe** | Openai | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 55 | **GPT Realtime 2.1** | Openai | 128K | 💬 text, audio, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 56 | **Mistral Nemo** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
+| 57 | **Mistral Small 3.2** | Pollinations AI | 128K | 💬 text | unlimited (no auth) | [link](https://pollinations.ai) |
+| 58 | **GPT-4o** | Pollinations AI | 128K | 💬 text, 🖼️ vision | unlimited (no auth) | [link](https://pollinations.ai) |
+| 59 | **Decision Model Preview** | AIHubMix | 64K | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 60 | **Jina Ocr V1** | AIHubMix | 32K | 🖼️ vision, 💬 text | varies | [link](https://aihubmix.com/models) |
+| 61 | **Doubao Seedream 5.5** | Bytedance | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 62 | **Ling 3.2 Flash (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 63 | **Particle 1 (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 64 | **Lfm 3 1.7b (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 65 | **Nemotron 3.5 Super VL (free)** | AIHubMix | — | 💬 text, 🖼️ vision | varies | [link](https://aihubmix.com/models) |
+| 66 | **Span 01 Lite (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 67 | **Elephant 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
+| 68 | **Mammoth 1 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 69 | **ERNIE 5.5 Flash Preview (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
 | 70 | **Flint V1.0 (free)** | AIHubMix | — | 💬 text | varies | [link](https://aihubmix.com/models) |
-| 71 | **Eleven Music v2** | Elevenlabs | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 72 | **Scribe v2** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 73 | **Scribe v2 Realtime** | AIHubMix | — | audio, 💬 text | varies | [link](https://aihubmix.com/models) |
-| 74 | **Dubbing v1** | Elevenlabs | — | audio, video | varies | [link](https://aihubmix.com/models) |
-| 75 | **Dubbing v2** | Elevenlabs | — | audio, video | varies | [link](https://aihubmix.com/models) |
-| 76 | **Eleven Voice Isolator** | AIHubMix | — | audio | varies | [link](https://aihubmix.com/models) |
-| 77 | **Eleven English v2 (Speech to Speech)** | Elevenlabs | — | audio | varies | [link](https://aihubmix.com/models) |
-| 78 | **Eleven Flash v2** | Elevenlabs | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 79 | **Eleven Flash v2.5** | Elevenlabs | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 80 | **Eleven Multilingual v2 (Speech to Speech)** | Elevenlabs | — | audio | varies | [link](https://aihubmix.com/models) |
-| 81 | **Eleven Multilingual v2** | Elevenlabs | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 82 | **Eleven SFX v3** | Elevenlabs | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 83 | **Eleven v3** | Elevenlabs | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 84 | **Eleven v4** | Elevenlabs | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
-| 85 | **Eleven v4 Turbo** | Elevenlabs | — | 💬 text, audio | varies | [link](https://aihubmix.com/models) |
 <!-- TABLE_END -->
 
 ---

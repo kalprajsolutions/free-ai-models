@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-17T12:48:00.304Z",
-  "total_free_models": 85,
+  "updated_at": "2026-11-18T12:41:02.966Z",
+  "total_free_models": 70,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -1055,6 +1055,25 @@
       ]
     },
     {
+      "id": "aihubmix/gpt-realtime-2.1",
+      "name": "GPT Realtime 2.1",
+      "provider": "Openai",
+      "context_window": 128000,
+      "max_output": 32000,
+      "modalities": [
+        "text",
+        "audio",
+        "image"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-07-06",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
       "id": "pollinations/mistral-nemo",
       "name": "Mistral Nemo",
       "provider": "Pollinations AI",
@@ -1204,40 +1223,6 @@
       ]
     },
     {
-      "id": "aihubmix/elephant-1-free",
-      "name": "Elephant 1 (free)",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/mammoth-1-free",
-      "name": "Mammoth 1 (free)",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
       "id": "aihubmix/nemotron-3.5-super-vl-free",
       "name": "Nemotron 3.5 Super VL (free)",
       "provider": "AIHubMix",
@@ -1273,19 +1258,35 @@
       ]
     },
     {
-      "id": "aihubmix/gpt-live-transcribe",
-      "name": "GPT Live Transcribe",
-      "provider": "Openai",
+      "id": "aihubmix/elephant-1-free",
+      "name": "Elephant 1 (free)",
+      "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,
       "modalities": [
-        "audio",
         "text"
       ],
       "rate_limit": "varies",
       "notes": "",
       "source": "https://aihubmix.com/models",
-      "created": "2026-07-28",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/mammoth-1-free",
+      "name": "Mammoth 1 (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
       "available_via": [
         "AIHubMix"
       ]
@@ -1315,273 +1316,6 @@
       "max_output": 0,
       "modalities": [
         "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/music_v2",
-      "name": "Eleven Music v2",
-      "provider": "Elevenlabs",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/scribe_v2",
-      "name": "Scribe v2",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "audio",
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/scribe_v2_realtime",
-      "name": "Scribe v2 Realtime",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "audio",
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/dubbing_v1",
-      "name": "Dubbing v1",
-      "provider": "Elevenlabs",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "audio",
-        "video"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/dubbing_v2",
-      "name": "Dubbing v2",
-      "provider": "Elevenlabs",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "audio",
-        "video"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/eleven_audio_isolation",
-      "name": "Eleven Voice Isolator",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/eleven_english_sts_v2",
-      "name": "Eleven English v2 (Speech to Speech)",
-      "provider": "Elevenlabs",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/eleven_flash_v2",
-      "name": "Eleven Flash v2",
-      "provider": "Elevenlabs",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/eleven_flash_v2_5",
-      "name": "Eleven Flash v2.5",
-      "provider": "Elevenlabs",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/eleven_multilingual_sts_v2",
-      "name": "Eleven Multilingual v2 (Speech to Speech)",
-      "provider": "Elevenlabs",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/eleven_multilingual_v2",
-      "name": "Eleven Multilingual v2",
-      "provider": "Elevenlabs",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/eleven_text_to_sound_v3",
-      "name": "Eleven SFX v3",
-      "provider": "Elevenlabs",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/eleven_v3",
-      "name": "Eleven v3",
-      "provider": "Elevenlabs",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/eleven_v4",
-      "name": "Eleven v4",
-      "provider": "Elevenlabs",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "audio"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/eleven_v4_turbo",
-      "name": "Eleven v4 Turbo",
-      "provider": "Elevenlabs",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "audio"
       ],
       "rate_limit": "varies",
       "notes": "",
