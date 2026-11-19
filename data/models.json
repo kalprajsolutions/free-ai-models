@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T12:41:02.966Z",
+  "updated_at": "2026-11-19T12:31:17.700Z",
   "total_free_models": 70,
   "sources": [
     "OpenRouter",
@@ -23,7 +23,14 @@
       "source": "https://openrouter.ai/inclusionai/ling-3.2-flash:free",
       "created": 1794591958,
       "available_via": [
-        "OpenRouter"
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
       ]
     },
     {
@@ -533,7 +540,14 @@
       "source": "https://openrouter.ai/recursive/flint-v1.0:free",
       "created": 1792622765,
       "available_via": [
-        "OpenRouter"
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
       ]
     },
     {
