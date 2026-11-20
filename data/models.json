@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-19T12:31:17.700Z",
-  "total_free_models": 70,
+  "updated_at": "2026-11-20T12:31:27.815Z",
+  "total_free_models": 68,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -31,24 +31,6 @@
           "gateway": "Kilo Gateway",
           "url": "https://kilo.ai/docs/gateway/models-and-providers"
         }
-      ]
-    },
-    {
-      "id": "thinkingmachines/inkling-2-small:free",
-      "name": "Thinking Machines: Inkling 2 Small (free)",
-      "provider": "Thinkingmachines",
-      "context_window": 1048576,
-      "max_output": 131072,
-      "modalities": [
-        "text",
-        "image"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://openrouter.ai/thinkingmachines/inkling-2-small:free",
-      "created": 1794261847,
-      "available_via": [
-        "OpenRouter"
       ]
     },
     {
@@ -716,30 +698,6 @@
       "created": null,
       "available_via": [
         "AIHubMix"
-      ]
-    },
-    {
-      "id": "cohere/north-mini-code:free",
-      "name": "Cohere: North Mini Code (free)",
-      "provider": "Cohere",
-      "context_window": 256000,
-      "max_output": 64000,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://openrouter.ai/cohere/north-mini-code:free",
-      "created": 1781723748,
-      "available_via": [
-        "OpenRouter",
-        "Kilo Gateway"
-      ],
-      "alt_sources": [
-        {
-          "gateway": "Kilo Gateway",
-          "url": "https://kilo.ai/docs/gateway/models-and-providers"
-        }
       ]
     },
     {
