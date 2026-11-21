@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-20T12:31:27.815Z",
-  "total_free_models": 68,
+  "updated_at": "2026-11-21T12:08:25.246Z",
+  "total_free_models": 67,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -457,31 +457,6 @@
       "created": null,
       "available_via": [
         "AIHubMix"
-      ]
-    },
-    {
-      "id": "dots-studio/dots-3-note-preview:free",
-      "name": "Dots Studio: Dots3-Note Preview (free)",
-      "provider": "Dots studio",
-      "context_window": 512000,
-      "max_output": 460800,
-      "modalities": [
-        "text",
-        "image"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://openrouter.ai/dots-studio/dots-3-note-preview:free",
-      "created": 1786680361,
-      "available_via": [
-        "OpenRouter",
-        "Kilo Gateway"
-      ],
-      "alt_sources": [
-        {
-          "gateway": "Kilo Gateway",
-          "url": "https://kilo.ai/docs/gateway/models-and-providers"
-        }
       ]
     },
     {
