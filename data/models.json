@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-22T12:17:35.359Z",
-  "total_free_models": 67,
+  "updated_at": "2026-11-23T14:03:25.753Z",
+  "total_free_models": 69,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -457,6 +457,31 @@
       "created": null,
       "available_via": [
         "AIHubMix"
+      ]
+    },
+    {
+      "id": "dots-studio/dots-3-note-preview:free",
+      "name": "Dots Studio: Dots3-Note Preview (free)",
+      "provider": "Dots studio",
+      "context_window": 512000,
+      "max_output": 460800,
+      "modalities": [
+        "text",
+        "image"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://openrouter.ai/dots-studio/dots-3-note-preview:free",
+      "created": 1786680361,
+      "available_via": [
+        "OpenRouter",
+        "Kilo Gateway"
+      ],
+      "alt_sources": [
+        {
+          "gateway": "Kilo Gateway",
+          "url": "https://kilo.ai/docs/gateway/models-and-providers"
+        }
       ]
     },
     {
@@ -1170,6 +1195,40 @@
       ]
     },
     {
+      "id": "aihubmix/elephant-1-free",
+      "name": "Elephant 1 (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/mammoth-1-free",
+      "name": "Mammoth 1 (free)",
+      "provider": "AIHubMix",
+      "context_window": 0,
+      "max_output": 0,
+      "modalities": [
+        "text"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": null,
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
       "id": "aihubmix/nemotron-3.5-super-vl-free",
       "name": "Nemotron 3.5 Super VL (free)",
       "provider": "AIHubMix",
@@ -1205,8 +1264,8 @@
       ]
     },
     {
-      "id": "aihubmix/elephant-1-free",
-      "name": "Elephant 1 (free)",
+      "id": "aihubmix/coding-glm-5.4-free",
+      "name": "Coding GLM 5.4 (free)",
       "provider": "AIHubMix",
       "context_window": 0,
       "max_output": 0,
@@ -1216,24 +1275,7 @@
       "rate_limit": "varies",
       "notes": "",
       "source": "https://aihubmix.com/models",
-      "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/mammoth-1-free",
-      "name": "Mammoth 1 (free)",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
+      "created": "2026-11-23",
       "available_via": [
         "AIHubMix"
       ]
