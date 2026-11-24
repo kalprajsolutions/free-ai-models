@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T14:03:25.753Z",
+  "updated_at": "2026-11-24T14:34:04.862Z",
   "total_free_models": 69,
   "sources": [
     "OpenRouter",
@@ -233,6 +233,26 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": "2026-06-04",
+      "available_via": [
+        "AIHubMix"
+      ]
+    },
+    {
+      "id": "aihubmix/coding-glm-5.4-free",
+      "name": "Coding GLM 5.4 (free)",
+      "provider": "Zhipu",
+      "context_window": 1048576,
+      "max_output": 0,
+      "modalities": [
+        "text",
+        "image",
+        "video",
+        "document"
+      ],
+      "rate_limit": "varies",
+      "notes": "",
+      "source": "https://aihubmix.com/models",
+      "created": "2026-11-23",
       "available_via": [
         "AIHubMix"
       ]
@@ -1259,23 +1279,6 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": null,
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/coding-glm-5.4-free",
-      "name": "Coding GLM 5.4 (free)",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": "2026-11-23",
       "available_via": [
         "AIHubMix"
       ]
