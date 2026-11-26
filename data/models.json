@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T13:54:35.520Z",
+  "updated_at": "2026-11-26T13:33:49.269Z",
   "total_free_models": 68,
   "sources": [
     "OpenRouter",
@@ -38,7 +38,7 @@
       "name": "Particle AI: Particle-1 (free)",
       "provider": "Particle ai",
       "context_window": 1048576,
-      "max_output": 131072,
+      "max_output": 943718,
       "modalities": [
         "text",
         "image"
