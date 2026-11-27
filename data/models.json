@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-26T13:33:49.269Z",
-  "total_free_models": 68,
+  "updated_at": "2026-11-27T13:30:10.529Z",
+  "total_free_models": 66,
   "sources": [
     "OpenRouter",
     "Kilo Gateway",
@@ -8,31 +8,6 @@
     "config/custom-providers.json"
   ],
   "models": [
-    {
-      "id": "inclusionai/ling-3.2-flash:free",
-      "name": "inclusionAI: Ling 3.2 Flash (free)",
-      "provider": "Inclusionai",
-      "context_window": 1048576,
-      "max_output": 262144,
-      "modalities": [
-        "text",
-        "image"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://openrouter.ai/inclusionai/ling-3.2-flash:free",
-      "created": 1794591958,
-      "available_via": [
-        "OpenRouter",
-        "Kilo Gateway"
-      ],
-      "alt_sources": [
-        {
-          "gateway": "Kilo Gateway",
-          "url": "https://kilo.ai/docs/gateway/models-and-providers"
-        }
-      ]
-    },
     {
       "id": "particle-ai/particle-1:free",
       "name": "Particle AI: Particle-1 (free)",
@@ -1132,24 +1107,6 @@
       "notes": "",
       "source": "https://aihubmix.com/models",
       "created": "2026-11-11",
-      "available_via": [
-        "AIHubMix"
-      ]
-    },
-    {
-      "id": "aihubmix/ling-3.2-flash-free",
-      "name": "Ling 3.2 Flash (free)",
-      "provider": "AIHubMix",
-      "context_window": 0,
-      "max_output": 0,
-      "modalities": [
-        "text",
-        "image"
-      ],
-      "rate_limit": "varies",
-      "notes": "",
-      "source": "https://aihubmix.com/models",
-      "created": null,
       "available_via": [
         "AIHubMix"
       ]
